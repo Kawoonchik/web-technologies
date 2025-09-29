@@ -6,9 +6,9 @@
 </head>
 <body>
 
-  <h1 align="center">Анкета користувача (приклад HTML5 можливостей)</h1>
+  <h1 align="center">Анкета</h1>
 
-  <!-- ========== ФОРМА A: метод GET (щоб бачити структуру запиту в URL) ========== -->
+ 
   <form action="" method="get" accept-charset="utf-8">
     <fieldset>
       <legend>Особисті дані (GET)</legend>
@@ -23,7 +23,8 @@
       <textarea id="about" name="about" placeholder="Розкажіть кілька слів..." rows="4" cols="50" tabindex="3"></textarea><br><br>
 
       <label for="pwd">Пароль (6 символів: 1 велика, 1 мала, 1 цифра):</label><br>
-      <!-- пароль: саме 6 символів, принаймні одна велика, одна мала і одна цифра -->
+    
+
       <input id="pwd" name="password" type="password"
              placeholder="Наприклад: Abc123"
              pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{6}"
@@ -38,7 +39,7 @@
              tabindex="5" required><br><br>
 
       <label for="phoneA">Моб. номер:</label><br>
-      <!-- приклад простого патерну: допускає + і 9-15 цифр -->
+   
       <input id="phoneA" name="phone" type="tel" placeholder="+380XXXXXXXXX"
              pattern="^\+?\d{9,15}$"
              title="Номер: лише цифри, можливо '+' на початку, 9-15 цифр"
@@ -52,7 +53,8 @@
     <fieldset>
       <legend>Варіанти (radio) та чекбокси</legend>
 
-      <!-- Перший блок radio (3 значення) -->
+      
+
       <div>
         <p>Форма навчання:</p>
         <label><input type="radio" name="study_form" value="fulltime" tabindex="8" required> Очна</label><br>
@@ -61,7 +63,7 @@
       </div>
       <br>
 
-      <!-- Другий блок radio (3 значення) з checked за замовчуванням -->
+      
       <div>
         <p>Група (семестр):</p>
         <label><input type="radio" name="group_sem" value="sem1" tabindex="11"> Семестр 1</label><br>
@@ -70,7 +72,7 @@
       </div>
       <br>
 
-      <!-- Checkbox блок (4 значення) -->
+      
       <div>
         <p>Інтереси (виберіть будь-які):</p>
         <label><input type="checkbox" name="interest_music" value="music" tabindex="14"> Музика</label><br>
@@ -84,7 +86,7 @@
     <fieldset>
       <legend>Різні списки (select) та підказки</legend>
 
-      <!-- селект 5 значень, третє selected за замовчуванням -->
+      
       <label for="favcolor">Улюблений колір:</label><br>
       <select id="favcolor" name="favcolor" tabindex="18" required>
         <option value="red">Червоний</option>
@@ -94,7 +96,7 @@
         <option value="black">Чорний</option>
       </select><br><br>
 
-      <!-- селект з можливістю множинного вибору (6 значень) -->
+      
       <label for="langs">Мови програмування (можна вибрати декілька):</label><br>
       <select id="langs" name="langs[]" multiple size="4" tabindex="19">
         <option value="c">C</option>
@@ -105,7 +107,7 @@
         <option value="rs">Rust</option>
       </select><br><br>
 
-      <!-- select з optgroup (4 групи по 3 значення) -->
+     
       <label for="study">Предмети (групи):</label><br>
       <select id="study" name="study" tabindex="20">
         <optgroup label="Фундаментальні">
@@ -130,7 +132,7 @@
         </optgroup>
       </select><br><br>
 
-      <!-- datalist підказки -->
+    
       <label for="city">Місто проживання (підказки):</label><br>
       <input id="city" name="city" list="cities" placeholder="Введіть місто" tabindex="21">
       <datalist id="cities">
@@ -150,7 +152,7 @@
 
   <hr>
 
-  <!-- ========== ФОРМА B: метод POST + multipart/form-data (файли) ========== -->
+ 
   <form action="" method="post" enctype="multipart/form-data" accept-charset="utf-8">
     <fieldset>
       <legend>Додаткові дані та завантаження файлів (POST + multipart/form-data)</legend>
@@ -172,7 +174,7 @@
       <label for="notes">Додаткові нотатки:</label><br>
       <textarea id="notes" name="notes" rows="3" cols="50" placeholder="Ваші коментарі..." tabindex="4"></textarea><br><br>
 
-      <!-- завантаження файлів: тільки аудіо, більше одного файлу -->
+      
       <label for="audio">Завантажте аудіофайли (тільки аудіо, можна декілька):</label><br>
       <input id="audio" name="audio_files[]" type="file"
              accept="audio/*"
@@ -188,7 +190,7 @@
         <option value="Song C">
       </datalist><br><br>
 
-      <!-- Кнопки POST -->
+      
       <button type="submit" tabindex="7">Відправити (POST)</button>
       <button type="reset" tabindex="8">Скинути</button>
 
@@ -196,8 +198,6 @@
   </form>
 
   <hr>
-
-  <p><em>Примітка:</em> У формі A (method="get") після натискання <strong>Відправити</strong> ви побачите структуру запиту в адресному рядку браузера (параметри name=value). У формі B (method="post" enctype="multipart/form-data") дані (включаючи файли) будуть відправлені в тілі HTTP-запиту — це не відображається в URL.</p>
 
 </body>
 </html>
