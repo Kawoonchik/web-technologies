@@ -1,0 +1,50 @@
+/* 1.2: Універсальний селектор для всього контенту */
+* {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/* 1.3: Селектори тегів */
+p {
+    color: green;
+    text-align: center;
+}
+
+div {
+    text-align: justify;
+}
+
+/* 1.4: Селектор класу для 1-го та 3-го абзацу */
+.red-text {
+    color: red;
+}
+
+/* 1.5: Клас, що забороняє перенесення рядка */
+.no-wrap {
+    white-space: nowrap;
+}
+
+/* 1.6: Ідентифікатор для 2-го абзацу */
+#special-text {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* 1.7: Клас тіні для тексту (2-й абзац та 2-й div) */
+.text-shadow {
+    text-shadow: 5px -5px 3px blue;
+}
+
+/* 1.8: Клас для 1-го блочного елемента */
+.block1 {
+    text-decoration: line-through;
+    text-transform: uppercase;
+    text-indent: 50px;
+}
+
+/* 1.9: Клас для 2-го блочного елемента */
+.block2 {
+    letter-spacing: 30px;
+    word-spacing: 50px;
+}
