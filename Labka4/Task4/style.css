@@ -1,0 +1,59 @@
+/* 4.1 — span всередині p.text-background */
+p.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 4.2 — span всередині p.text-background, який у div */
+div p.text-background span {
+    background-color: yellow;
+}
+
+/* 4.3 — span всередині іншого span */
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+/* 4.4 — span всередині span, який у ol */
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* 4.5 — p, які безпосередньо всередині section */
+section > p {
+    text-shadow: 3px 3px 5px blue;
+    text-indent: 50px;
+}
+
+/* 4.6 — ul, які безпосередньо всередині li */
+li > ul {
+    list-style-image: url("marker.png");
+}
+
+/* 4.7 — p.text-background безпосередньо в div */
+div > p.text-background {
+    word-spacing: 50px;
+}
+
+/* 4.8 — p безпосередньо в .text-bold */
+.text-bold > p {
+    font-weight: bold;
+}
+
+/* 4.9 — p безпосередньо в section, яке в div.text-bold */
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+/* 4.10 — p одразу після img */
+img + p {
+    background-color: brown;
+}
+
+/* 4.11 — p після section (усі сусідні) */
+section ~ p {
+    color: red;
+}
