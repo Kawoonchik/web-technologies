@@ -1,59 +1,88 @@
-/* 4.1 — span всередині p.text-background */
+/*  4.1 */
+/* Курсив, жирність, підкреслення лише для span всередині p.text-background */
 p.text-background span {
     font-style: italic;
     font-weight: bold;
     text-decoration: underline;
 }
 
-/* 4.2 — span всередині p.text-background, який у div */
+/*  4.2  */
+/* Жовтий фон лише для span, які в p.text-background, що в div */
 div p.text-background span {
     background-color: yellow;
 }
 
-/* 4.3 — span всередині іншого span */
+/*  4.3  */
+/* Сірий фон і перекреслений текст для span, що всередині інших span */
 span span {
-    background-color: gray;
+    background-color: lightgray;
     text-decoration: line-through;
 }
 
-/* 4.4 — span всередині span, який у ol */
+/*  4.4  */
+/* 18px + uppercase лише для span всередині span у списках ol */
 ol span span {
     font-size: 18px;
     text-transform: uppercase;
 }
 
-/* 4.5 — p, які безпосередньо всередині section */
+/*  4.5  */
+/* Тінь тексту + відступ першого рядка для абзаців у section*/
 section > p {
-    text-shadow: 3px 3px 5px blue;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
     text-indent: 50px;
 }
 
-/* 4.6 — ul, які безпосередньо всередині li */
+/*  4.6  */
+/* Заміна маркера списку на зображення для ul безпосередньо в li */
 li > ul {
-    list-style-image: url("marker.png");
+    list-style-image: url("bullet.png"); /* заміни на своє зображення */
 }
 
-/* 4.7 — p.text-background безпосередньо в div */
+/*  4.7  */
+/* Інтервал між словами для p.text-background у div на 1 рівні */
 div > p.text-background {
     word-spacing: 50px;
 }
 
-/* 4.8 — p безпосередньо в .text-bold */
-.text-bold > p {
+/*  4.8  */
+/* Жирний текст лише для p на 1 рівні у div.text-bold */
+div.text-bold > p {
     font-weight: bold;
 }
 
-/* 4.9 — p безпосередньо в section, яке в div.text-bold */
-.text-bold > section > p {
+/* 4.9  */
+/* Міжрядковий інтервал лише для p у section, що є дочірнім div.text-bold */
+div.text-bold > section > p {
     line-height: 45px;
 }
 
-/* 4.10 — p одразу після img */
+/*  4.10  */
+/* Коричневий фон для p, що йде одразу після img */
 img + p {
     background-color: brown;
+    color: white;
 }
 
-/* 4.11 — p після section (усі сусідні) */
+/*  4.11  */
+/* Червоний колір для p, які йдуть після section на тому ж рівні */
 section ~ p {
     color: red;
+}
+
+/*  Декоративне оформлення заголовків  */
+h1, h2 {
+    color: darkblue;
+    text-align: center;
+    font-family: "Georgia", serif;
+}
+
+/*  Додаткове оформлення тексту  */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f5f5f5;
+}
+p {
+    margin-bottom: 10px;
 }

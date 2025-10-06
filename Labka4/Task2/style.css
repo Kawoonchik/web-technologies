@@ -1,65 +1,51 @@
-/* ==== Базові стилі сторінки ==== */
 body {
-    font-family: Verdana, Arial, sans-serif;
-    background-color: #f2f8f5;
-    color: #222;
+    font-family: "Times New Roman", serif;
     margin: 40px;
+    border: 1px solid #a1a1a1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* ==== Селектор тегів ==== */
-p {
-    text-align: justify;
-    line-height: 1.8;
+h1 {
+    text-align: center;
+    color: red;
+}
+
+h2 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+p, li {
     font-size: 18px;
-    color: #333;
+    line-height: 1.6;
 }
 
-/* ==== Селектор ідентифікатора ==== */
-#main-title {
-    font-family: "Trebuchet MS", sans-serif;
-    font-size: 36px;
-    text-align: center;
-    color: darkgreen;
-    text-shadow: 2px 2px 4px #aaa;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-/* ==== Селектори класів ==== */
-
-/* Клас для вступного абзацу */
-.intro-text {
-    font-style: italic;
-    color: #005b96;
-    text-indent: 50px;
-}
-
-/* Клас для виділення ключового абзацу */
-.highlight {
-    font-weight: bold;
-    color: #c1121f;
-    background-color: #ffe8e8;
-    border-left: 5px solid #c1121f;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Клас для результату */
-.result {
-    margin-top: 20px;
-    text-transform: capitalize;
+.underline {
     text-decoration: underline;
-    word-spacing: 5px;
-    font-size: 19px;
 }
 
-/* Ідентифікатор для нижнього блоку */
-#footer {
-    margin-top: 40px;
-    text-align: right;
-    font-size: 16px;
-    color: #444;
-    border-top: 1px solid #aaa;
+.color-highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.note {
+    border-top: 3px solid green;
+    margin-top: 20px;
     padding-top: 10px;
+    text-align: center;
     font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 20px;
+}
+
+ul li::before {
+    content: "• ";
+    color: black;
 }
