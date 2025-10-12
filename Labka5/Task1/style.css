@@ -22,7 +22,7 @@ ul {
   background-color: rgb(103, 158, 128);
   padding: 0 px 20px 0 px 50px;
 }
-/* 2 рівень */
+
 .level2 {
   background-color: rgb(153, 180, 102);
   font-size: 18px;
@@ -34,7 +34,6 @@ ul {
   margin-bottom: 10px;
 }
 
-/* Іконки */
 .level1 img,
 .level2 img {
   width: 30px;
@@ -43,13 +42,11 @@ ul {
   margin-right: 10px;
 }
 
-/* Span */
 span {
   padding: 10px 20px;
   display: inline-block;
 }
 
-/* Span у списку 1 рівня */
 .level1 > li > span {
   font-size: 20px;
   font-weight: 700;
@@ -57,7 +54,6 @@ span {
   margin-bottom: 10px;
 }
 
-/* Span у списку 2 рівня */
 .level2 span {
   background-color: rgb(218, 106, 32);
 }
