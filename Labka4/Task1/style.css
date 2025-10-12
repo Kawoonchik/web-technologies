@@ -37,14 +37,14 @@ div {
 }
 
 /* 1.8: Клас для 1-го блочного елемента */
-.block1 {
+.block-one {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
 /* 1.9: Клас для 2-го блочного елемента */
-.block2 {
+.block-two {
     letter-spacing: 30px;
     word-spacing: 50px;
 }

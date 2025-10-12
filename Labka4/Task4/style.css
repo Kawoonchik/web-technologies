@@ -36,7 +36,7 @@ section > p {
 /*  4.6  */
 /* Заміна маркера списку на зображення для ul безпосередньо в li */
 li > ul {
-    list-style-image: url("bullet.png"); /* заміни на своє зображення */
+    list-style-image: url("bullet.png"); 
 }
 
 /*  4.7  */

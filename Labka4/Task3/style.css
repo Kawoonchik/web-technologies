@@ -1,3 +1,10 @@
+/* Додаткове стилізування для гарного вигляду */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f9f7;
+    margin: 30px;
+}
+
 /* 3.1. Усі посилання меню — фіолетові */
 a {
     color: purple;
@@ -34,12 +41,6 @@ ol {
     list-style-position: inside;
 }
 
-/* Додаткове стилізування для гарного вигляду */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f9f7;
-    margin: 30px;
-}
 
 ul {
     line-height: 1.8;

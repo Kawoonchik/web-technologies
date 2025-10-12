@@ -6,13 +6,15 @@ body {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1 {
+.recipe {
     text-align: center;
+}
+
+h1 {
     color: red;
 }
 
 h2 {
-    text-align: center;
     font-style: italic;
     margin-bottom: 20px;
 }
@@ -35,7 +37,6 @@ p, li {
     border-top: 3px solid green;
     margin-top: 20px;
     padding-top: 10px;
-    text-align: center;
     font-style: italic;
 }
 
@@ -49,3 +50,5 @@ ul li::before {
     content: "• ";
     color: black;
 }
+
+
