@@ -17,6 +17,19 @@ ul {
   margin: 0;
 }
 
+span {
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.level1 > li > span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 .level1 > li {
   background-color: rgb(103, 158, 128);
   padding-right: 20px;
@@ -79,19 +92,7 @@ ul {
   background-image: url("icons/festival.svg");
 }
 
-/* --- Текст --- */
-span {
-  padding: 10px 20px;
-  display: inline-block;
-}
 
-.level1 > li > span {
-  font-size: 20px;
-  font-weight: 700;
-  background-color: rgb(199, 124, 106);
-  margin-bottom: 10px;
-  display: inline-block;
-}
 
 .level2 span {
   background-color: rgb(218, 106, 32);
