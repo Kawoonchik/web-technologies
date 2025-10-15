@@ -17,7 +17,6 @@ ul {
   margin: 0;
 }
 
-/* --- Основні етапи (верхній рівень) --- */
 .level1 > li {
   background-color: rgb(103, 158, 128);
   padding-right: 20px;
@@ -29,7 +28,6 @@ ul {
   background-size: 24px 24px;
 }
 
-/* --- Підетапи (другий рівень) --- */
 .level2 {
   background-color: rgb(153, 180, 102);
   font-size: 18px;
@@ -45,16 +43,10 @@ ul {
   background-size: 20px 20px;
 }
 
-/* --- Іконки для розділів --- */
 .prep {
   background-image: url("icons/rule.svg");
 }
 
-.rest {
-  background-image: url("icons/rule.svg");
-}
-
-/* --- Іконки для підпунктів першого розділу --- */
 .route {
   background-image: url("icons/ad_units.svg");
 }
@@ -71,7 +63,6 @@ ul {
   background-image: url("icons/car_rental.svg");
 }
 
-/* --- Іконки для підпунктів другого розділу --- */
 .bar {
   background-image: url("icons/local_bar.svg");
 }
