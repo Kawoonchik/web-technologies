@@ -36,11 +36,11 @@ td:first-child {
 }
 
 tr:nth-child(odd) td:not(:first-child) {
-    background-color: #fae0e0;  /* світліший */
+    background-color: #fae0e0;  
 }
 
 tr:nth-child(even) td:not(:first-child) {
-    background-color: #f4cccc;  /* трохи темніший */
+    background-color: #f4cccc; 
 }
 
 

@@ -12,16 +12,24 @@ h1 {
 }
 
 ul {
-  list-style: none;
-  margin: 0;
+  list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
+/* --- Основні етапи (верхній рівень) --- */
 .level1 > li {
   background-color: rgb(103, 158, 128);
-  padding: 0px 20px 0px 50px;
+  padding-right: 20px;
+  padding-left: 50px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  background-position: 15px 10px;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
 }
 
+/* --- Підетапи (другий рівень) --- */
 .level2 {
   background-color: rgb(153, 180, 102);
   font-size: 18px;
@@ -31,65 +39,56 @@ ul {
 
 .level2 li {
   margin-bottom: 10px;
-}
-
-/* ---------- ІКОНИ ---------- */
-.level1 > li::before,
-.level2 li::before {
-  content: "";
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  vertical-align: middle;
-  margin-right: 10px;
-  background-size: contain;
+  padding-left: 40px;
+  background-position: 10px center;
   background-repeat: no-repeat;
+  background-size: 20px 20px;
 }
 
-/* Основні розділи */
-.prep::before {
-  background-image: url("icons/rule.png");
+/* --- Іконки для розділів --- */
+.prep {
+  background-image: url("icons/rule.svg");
 }
 
-.rest::before {
-  background-image: url("icons/rule.png");
+.rest {
+  background-image: url("icons/rule.svg");
 }
 
-/* Підпункти першого розділу */
-.route::before {
-  background-image: url("icons/ad_units.png");
+/* --- Іконки для підпунктів першого розділу --- */
+.route {
+  background-image: url("icons/ad_units.svg");
 }
 
-.ticket::before {
-  background-image: url("icons/airplane_ticket.png");
+.ticket {
+  background-image: url("icons/airplane_ticket.svg");
 }
 
-.hotel::before {
-  background-image: url("icons/hotel.png");
+.hotel {
+  background-image: url("icons/hotel.svg");
 }
 
-.car::before {
-  background-image: url("icons/car_rental.png");
+.car {
+  background-image: url("icons/car_rental.svg");
 }
 
-/* Підпункти другого розділу */
-.bar::before {
-  background-image: url("icons/local_bar.png");
+/* --- Іконки для підпунктів другого розділу --- */
+.bar {
+  background-image: url("icons/local_bar.svg");
 }
 
-.casino::before {
-  background-image: url("icons/casino.png");
+.casino {
+  background-image: url("icons/casino.svg");
 }
 
-.museum::before {
-  background-image: url("icons/museum.png");
+.museum {
+  background-image: url("icons/museum.svg");
 }
 
-.festival::before {
-  background-image: url("icons/festival.png");
+.festival {
+  background-image: url("icons/festival.svg");
 }
-/* --------------------------- */
 
+/* --- Текст --- */
 span {
   padding: 10px 20px;
   display: inline-block;
@@ -100,8 +99,11 @@ span {
   font-weight: 700;
   background-color: rgb(199, 124, 106);
   margin-bottom: 10px;
+  display: inline-block;
 }
 
 .level2 span {
   background-color: rgb(218, 106, 32);
+  width: 100%;
+  box-sizing: border-box;
 }
