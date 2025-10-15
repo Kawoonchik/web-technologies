@@ -1,4 +1,3 @@
-/* Загальні стилі для сторінки */
 body {
     font-family: Arial, sans-serif;
     background-color: #fff0f0;
@@ -7,56 +6,44 @@ body {
     margin-top: 50px;
 }
 
-/* Стилі таблиці */
 table {
     border-collapse: collapse;
     text-align: center;
     width: 700px;
 }
 
-/* Заголовки */
 th {
     padding: 15px;
     color: white;
 }
 
-/* Кольори заголовків — від світлого до темного */
-th:first-child {
-    background-color: #f7cfcf;
-    color: black;
-}
-th:nth-child(2) {
-    background-color: #e8a9a9;
-}
-th:nth-child(3) {
-    background-color: #d17b7b;
-}
-th:nth-child(4) {
-    background-color: #b85555;
-}
-th:nth-child(5) {
-    background-color: #993333;
-}
+th:first-child { background-color: #f8e4e4; color: #8b4a4a; text-align: left; }
+th:nth-child(2) { background-color: #eebaba; }
+th:nth-child(3) { background-color: #e39191; }
+th:nth-child(4) { background-color: #d46565; }
+th:last-child { background-color: #b84848; }
 
-/* Комірки таблиці */
 td {
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #d5b2b2;
 }
 
-/* Перший стовпець (назви послуг) */
 td:first-child {
     text-align: left;
-    background-color: #fae0e0;
+    background-color: #af2a2a;
     font-weight: bold;
+    color: white;
 }
 
-/* Решта комірок */
-td:not(:first-child) {
-    background-color: #f4cccc;
+tr:nth-child(odd) td:not(:first-child) {
+    background-color: #fae0e0;  /* світліший */
 }
 
-/* Ефект наведення */
+tr:nth-child(even) td:not(:first-child) {
+    background-color: #f4cccc;  /* трохи темніший */
+}
+
+
 tr:hover td {
     background-color: #ffe5e5;
 }

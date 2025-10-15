@@ -1,4 +1,3 @@
-
 div {
   background-color: rgb(255, 165, 0);
   width: 500px;
@@ -20,7 +19,7 @@ ul {
 
 .level1 > li {
   background-color: rgb(103, 158, 128);
-  padding: 0 px 20px 0 px 50px;
+  padding: 0px 20px 0px 50px;
 }
 
 .level2 {
@@ -34,13 +33,62 @@ ul {
   margin-bottom: 10px;
 }
 
-.level1 img,
-.level2 img {
+/* ---------- ІКОНИ ---------- */
+.level1 > li::before,
+.level2 li::before {
+  content: "";
+  display: inline-block;
   width: 30px;
   height: 30px;
   vertical-align: middle;
   margin-right: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+
+/* Основні розділи */
+.prep::before {
+  background-image: url("icons/rule.png");
+}
+
+.rest::before {
+  background-image: url("icons/rule.png");
+}
+
+/* Підпункти першого розділу */
+.route::before {
+  background-image: url("icons/ad_units.png");
+}
+
+.ticket::before {
+  background-image: url("icons/airplane_ticket.png");
+}
+
+.hotel::before {
+  background-image: url("icons/hotel.png");
+}
+
+.car::before {
+  background-image: url("icons/car_rental.png");
+}
+
+/* Підпункти другого розділу */
+.bar::before {
+  background-image: url("icons/local_bar.png");
+}
+
+.casino::before {
+  background-image: url("icons/casino.png");
+}
+
+.museum::before {
+  background-image: url("icons/museum.png");
+}
+
+.festival::before {
+  background-image: url("icons/festival.png");
+}
+/* --------------------------- */
 
 span {
   padding: 10px 20px;
