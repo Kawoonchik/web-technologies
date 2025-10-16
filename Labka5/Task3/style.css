@@ -75,6 +75,6 @@ button:hover {
 
 .form-buttons {
   display: flex;
-  gap: 10px;
+  gap: 30px;
   justify-content: flex-end;
 }
