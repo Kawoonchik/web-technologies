@@ -22,7 +22,7 @@ span {
   display: inline-block;
 }
 
-.level1 > li {
+.level-one > li {
   background-color: rgb(103, 158, 128);
   padding-right: 20px;
   padding-left: 50px;
@@ -33,7 +33,7 @@ span {
   background-size: 24px 24px;
 }
 
-.level1 > li > span {
+.level-one > li > span {
   font-size: 20px;
   font-weight: 700;
   background-color: rgb(199, 124, 106);
@@ -41,14 +41,14 @@ span {
   display: inline-block;
 }
 
-.level2 {
+.level-two {
   background-color: rgb(153, 180, 102);
   font-size: 18px;
   font-style: italic;
   padding-left: 40px;
 }
 
-.level2 li {
+.level-two li {
   margin-bottom: 10px;
   padding-left: 40px;
   background-position: 10px center;
@@ -56,7 +56,7 @@ span {
   background-size: 20px 20px;
 }
 
-.level2 span {
+.level-two span {
   background-color: rgb(218, 106, 32);
   width: auto;
   box-sizing: border-box;
