@@ -22,14 +22,6 @@ span {
   display: inline-block;
 }
 
-.level1 > li > span {
-  font-size: 20px;
-  font-weight: 700;
-  background-color: rgb(199, 124, 106);
-  margin-bottom: 10px;
-  display: inline-block;
-}
-
 .level1 > li {
   background-color: rgb(103, 158, 128);
   padding-right: 20px;
@@ -39,6 +31,14 @@ span {
   background-position: 15px 10px;
   background-repeat: no-repeat;
   background-size: 24px 24px;
+}
+
+.level1 > li > span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .level2 {
@@ -54,6 +54,12 @@ span {
   background-position: 10px center;
   background-repeat: no-repeat;
   background-size: 20px 20px;
+}
+
+.level2 span {
+  background-color: rgb(218, 106, 32);
+  width: auto;
+  box-sizing: border-box;
 }
 
 .prep {
@@ -92,10 +98,3 @@ span {
   background-image: url("icons/festival.svg");
 }
 
-
-
-.level2 span {
-  background-color: rgb(218, 106, 32);
-  width: 100%;
-  box-sizing: border-box;
-}

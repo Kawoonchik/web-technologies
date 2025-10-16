@@ -1,6 +1,5 @@
-body {
+div {
     font-family: Arial, sans-serif;
-    background-color: #fff0f0;
     display: flex;
     justify-content: center;
     margin-top: 50px;
