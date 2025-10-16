@@ -22,7 +22,7 @@ form {
 
 legend {
   font-weight: bold;
-  color: #0066cc;
+  color: #ffbb00;
   padding: 0 10px;
   font-size: 1.1em;
 }
@@ -33,11 +33,11 @@ label {
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='tel'],
+input[type='date'],
 textarea,
 select {
   width: 100%;
@@ -54,7 +54,7 @@ textarea {
 }
 
 button {
-  background-color: #007bff;
+  background-color: #ffbb00;
   color: white;
   padding: 10px 18px;
   border: none;

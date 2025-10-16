@@ -1,1 +1,137 @@
-<!DOCTYPE html> <html lang="uk"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <link rel="stylesheet" href="style.css" /> <title>Форми HTML</title> </head> <body> <form class="form" action="" method="get" autocomplete="on"> <fieldset class="form-section"> <legend>Особисті дані</legend> <div class="input-block"> <label for="fname">Ім'я:</label> <input id="fname" name="fname" type="text" placeholder="Введіть ім'я" required tabindex="1" /> <label for="bio">Коротко про себе:</label> <textarea id="bio" name="bio" placeholder="Коротко опишіть себе" required rows="4" tabindex="2"></textarea> </div> <label for="password">Пароль:</label> <input id="password" type="password" name="password" placeholder="Наприклад Abc123" required pattern="^(?=.{6,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$" title="Рівно 6 символів, має містити хоча б одну велику, одну малу літеру та одну цифру" tabindex="3" /> <label for="email">Email:</label> <input id="email" type="email" name="email" placeholder="example@domain.com" required autocomplete="off" pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$" title="Введіть коректний email" tabindex="4" /> <label for="tel">Мобільний номер:</label> <input id="tel" type="tel" name="tel" placeholder="+380XXXXXXXXX" required pattern="^\+380\d{9}$" title="Номер повинен містити +380 та 9 цифр" tabindex="5" /> <label for="bday">Дата народження:</label> <input id="bday" name="bday" type="date" required tabindex="6" /> </fieldset> <fieldset class="form-section"> <legend>Опитування</legend> <p>Група радіо 1:</p> <label><input type="radio" name="group1" value="v1" tabindex="7" /> Варіант 1</label> <label><input type="radio" name="group1" value="v2" tabindex="8" /> Варіант 2</label> <label><input type="radio" name="group1" value="v3" tabindex="9" /> Варіант 3</label> <p>Група радіо 2:</p> <label><input type="radio" name="group2" value="a" tabindex="10" /> Варіант A</label> <label><input type="radio" name="group2" value="b" checked tabindex="11" /> Варіант B</label> <label><input type="radio" name="group2" value="c" tabindex="12" /> Варіант C</label> <p>Прапорці:</p> <label><input type="checkbox" name="opt[]" value="1" tabindex="13" /> Пункт 1</label> <label><input type="checkbox" name="opt[]" value="2" tabindex="14" /> Пункт 2</label> <label><input type="checkbox" name="opt[]" value="3" tabindex="15" /> Пункт 3</label> <label><input type="checkbox" name="opt[]" value="4" tabindex="16" /> Пункт 4</label> </fieldset> <fieldset class="form-section"> <legend>Списки</legend> <label for="select5">Select (3-й selected):</label> <select id="select5" name="select5" tabindex="17"> <option value="s1">Опція 1</option> <option value="s2">Опція 2</option> <option value="s3" selected>Опція 3</option> <option value="s4">Опція 4</option> <option value="s5">Опція 5</option> </select> <label for="select6">Multiple select:</label> <select id="select6" name="select6[]" multiple size="6" tabindex="18"> <option>Мульти 1</option> <option>Мульти 2</option> <option>Мульти 3</option> <option>Мульти 4</option> <option>Мульти 5</option> <option>Мульти 6</option> </select> <label for="optgroup">Optgroup select:</label> <select id="optgroup" name="optgroup" tabindex="19"> <optgroup label="Група A"> <option>A1</option><option>A2</option><option>A3</option> </optgroup> <optgroup label="Група B"> <option>B1</option><option>B2</option><option>B3</option> </optgroup> </select> <label for="color">Поради (datalist):</label> <input id="color" name="color" list="colorlist" placeholder="Виберіть або введіть" tabindex="20" /> <datalist id="colorlist"> <option value="Червоний" /> <option value="Синій" /> <option value="Жовтий" /> <option value="Зелений" /> </datalist> </fieldset> <div class="form-buttons"> <button type="submit" tabindex="21">Надіслати (GET)</button> <button type="reset" tabindex="22" class="btn-secondary">Скинути</button> </div> </form> <form class="form-post" action="" method="post" enctype="multipart/form-data" autocomplete="off"> <fieldset class="form-section"> <legend>Форма POST</legend> <label for="post_name">Ім'я:</label> <input id="post_name" name="post_name" type="text" placeholder="Ім'я для POST" required tabindex="1" /> <label for="post_email">Email:</label> <input id="post_email" name="post_email" type="email" placeholder="example@domain.com" required tabindex="2" /> <label for="audio_files">Завантажити аудіо:</label> <input id="audio_files" name="audio_files[]" type="file" accept="audio/*" multiple required tabindex="3" /> <p>Радіо / Чекбокс:</p> <label><input type="radio" name="post_radio" value="yes" tabindex="4" /> Так</label> <label><input type="radio" name="post_radio" value="no" tabindex="5" /> Ні</label> <label><input type="checkbox" name="post_check" value="agree" tabindex="6" /> Згоден</label> </fieldset> <div class="form-buttons"> <button type="submit" tabindex="7">Надіслати (POST)</button> <button type="reset" tabindex="8" class="btn-secondary">Скинути</button> </div> </form> </body> </html>
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Форми HTML</title>
+  </head>
+  <body>
+    <form class="form" action="" method="get" autocomplete="on">
+      <fieldset class="form-section">
+        <legend>Особисті дані</legend>
+        <div class="input-block">
+          <label for="fname">Ім'я:</label>
+          <input id="fname" name="fname" type="text" placeholder="Введіть ім'я" required tabindex="1" />
+          <label for="bio">Коротко про себе:</label>
+          <textarea id="bio" name="bio" placeholder="Коротко опишіть себе" required rows="4" tabindex="2"></textarea>
+        </div>
+        <label for="password">Пароль:</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Наприклад Abc123"
+          required
+          pattern="^(?=.{6,}$)(?=.*[A-Z])(?=.*[a-z])(?=.*\d).*$"
+          title="Рівно 6 символів, має містити хоча б одну велику, одну малу літеру та одну цифру"
+          tabindex="3"
+        />
+        <label for="email">Email:</label>
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="example@domain.com"
+          required
+          autocomplete="off"
+          pattern="^[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}$"
+          title="Введіть коректний email"
+          tabindex="4"
+        />
+        <label for="tel">Мобільний номер:</label>
+        <input
+          id="tel"
+          type="tel"
+          name="tel"
+          placeholder="+380*********"
+          required
+          pattern="^\+380\d{9}$"
+          title="Номер повинен містити +380 та 9 цифр"
+          tabindex="5"
+        />
+        <label for="bday">Дата народження:</label> <input id="bday" name="bday" type="date" required tabindex="6" />
+      </fieldset>
+      <fieldset class="form-section">
+        <legend>Опитування</legend>
+        <p>Група радіо 1:</p>
+        <label><input type="radio" name="group1" value="v1" tabindex="7" /> Варіант 1</label>
+        <label><input type="radio" name="group1" value="v2" tabindex="8" /> Варіант 2</label>
+        <label><input type="radio" name="group1" value="v3" tabindex="9" /> Варіант 3</label>
+        <p>Група радіо 2:</p>
+        <label><input type="radio" name="group2" value="a" tabindex="10" /> Варіант A</label>
+        <label><input type="radio" name="group2" value="b" checked tabindex="11" /> Варіант B</label>
+        <label><input type="radio" name="group2" value="c" tabindex="12" /> Варіант C</label>
+        <p>Прапорці:</p>
+        <label><input type="checkbox" name="opt[]" value="1" tabindex="13" /> Пункт 1</label>
+        <label><input type="checkbox" name="opt[]" value="2" tabindex="14" /> Пункт 2</label>
+        <label><input type="checkbox" name="opt[]" value="3" tabindex="15" /> Пункт 3</label>
+        <label><input type="checkbox" name="opt[]" value="4" tabindex="16" /> Пункт 4</label>
+      </fieldset>
+      <fieldset class="form-section">
+        <legend>Списки</legend>
+        <label for="select5">Select (3-й selected):</label>
+        <select id="select5" name="select5" tabindex="17">
+          <option value="s1">Опція 1</option>
+          <option value="s2">Опція 2</option>
+          <option value="s3" selected>Опція 3</option>
+          <option value="s4">Опція 4</option>
+          <option value="s5">Опція 5</option>
+        </select>
+        <label for="select6">Multiple select:</label>
+        <select id="select6" name="select6[]" multiple size="6" tabindex="18">
+          <option>Мульти 1</option>
+          <option>Мульти 2</option>
+          <option>Мульти 3</option>
+          <option>Мульти 4</option>
+          <option>Мульти 5</option>
+          <option>Мульти 6</option>
+        </select>
+        <label for="optgroup">Optgroup select:</label>
+        <select id="optgroup" name="optgroup" tabindex="19">
+          <optgroup label="Група A">
+            <option>A1</option>
+            <option>A2</option>
+            <option>A3</option>
+          </optgroup>
+          <optgroup label="Група B">
+            <option>B1</option>
+            <option>B2</option>
+            <option>B3</option>
+          </optgroup>
+        </select>
+        <label for="color">Поради (datalist):</label>
+        <input id="color" name="color" list="colorlist" placeholder="Виберіть або введіть" tabindex="20" />
+        <datalist id="colorlist">
+          <option value="Червоний" />
+          <option value="Синій" />
+          <option value="Жовтий" />
+          <option value="Зелений" />
+        </datalist>
+      </fieldset>
+      <div class="form-buttons">
+        <button type="submit" tabindex="21">Надіслати (GET)</button>
+        <button type="reset" tabindex="22" class="btn-secondary">Скинути</button>
+      </div>
+    </form>
+    <form class="form-post" action="" method="post" enctype="multipart/form-data" autocomplete="off">
+      <fieldset class="form-section">
+        <legend>Форма POST</legend>
+        <label for="post_name">Ім'я:</label>
+        <input id="post_name" name="post_name" type="text" placeholder="Ім'я для POST" required tabindex="1" />
+        <label for="post_email">Email:</label>
+        <input id="post_email" name="post_email" type="email" placeholder="example@domain.com" required tabindex="2" />
+        <label for="audio_files">Завантажити аудіо:</label>
+        <input id="audio_files" name="audio_files[]" type="file" accept="audio/*" multiple required tabindex="3" />
+        <p>Радіо / Чекбокс:</p>
+        <label><input type="radio" name="post_radio" value="yes" tabindex="4" /> Так</label>
+        <label><input type="radio" name="post_radio" value="no" tabindex="5" /> Ні</label>
+        <label><input type="checkbox" name="post_check" value="agree" tabindex="6" /> Згоден</label>
+      </fieldset>
+      <div class="form-buttons">
+        <button type="submit" tabindex="7">Надіслати (POST)</button>
+        <button type="reset" tabindex="8" class="btn-secondary">Скинути</button>
+      </div>
+    </form>
+  </body>
+</html>
