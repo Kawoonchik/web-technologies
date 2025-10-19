@@ -115,7 +115,7 @@ header {
 }
 
 .grad4 {
-  background-image: linear-gradient(135deg, orange 50%, yellow 50%);
+  background: linear-gradient(135deg, #ff9900, #ffff00 50%, #00cc00);
 }
 
 .grad5 {
