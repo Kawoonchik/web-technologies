@@ -83,3 +83,9 @@ header {
   width: 200px;
   margin: 10px 0 10px 20px;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

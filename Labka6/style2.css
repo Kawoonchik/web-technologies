@@ -145,3 +145,9 @@ main {
   color: #333;
   text-align: left;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

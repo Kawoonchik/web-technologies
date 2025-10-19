@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf5;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+header {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.logo {
+  float: left;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.menu {
+  float: right;
+  margin-top: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #e65500;
+}
+
+.gradient-block {
+  width: 300px;
+  height: 400px;
+  float: left;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+  box-sizing: border-box;
+}
+
+.gradient-block img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.gradient-block h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.gradient-block p {
+  font-size: 14px;
+}
+
+/* Градієнти */
+.grad1 {
+  background-image: linear-gradient(to right, yellow, blue), radial-gradient(circle at top left, red, transparent);
+  background-blend-mode: screen;
+}
+
+.grad2 {
+  background-image: repeating-linear-gradient(45deg, white, black 20px), radial-gradient(circle, violet, transparent 50%);
+  background-blend-mode: multiply;
+}
+
+.grad3 {
+  background-image: linear-gradient(to right, green, blue), repeating-linear-gradient(90deg, red, yellow 10px);
+  background-blend-mode: lighten;
+}
+
+.grad4 {
+  background-image: radial-gradient(circle at top, yellow, green), linear-gradient(to bottom, blue, violet);
+  background-blend-mode: screen;
+}
+
+.grad5 {
+  background-image: radial-gradient(circle at center, red, orange), linear-gradient(to right, green, blue);
+  background-blend-mode: overlay;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

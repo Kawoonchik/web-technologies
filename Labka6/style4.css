@@ -114,3 +114,9 @@ header {
 .shadow6 {
   box-shadow: 0 -10px 0 -7px green, 0 10px 0 -7px orange;
 }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
