@@ -81,32 +81,62 @@ main {
   border: 6px solid green;
   background-color: #eaffea;
 }
-
+.green-salad {
+  border: 6px solid;
+  border-color: green greenyellow;
+  background-color: #eaffea;
+}
 /* Помаранчеві блоки з border-image */
 .orange {
-  border: 10px solid transparent;
-  border-image: url('https://i.imgur.com/H7Xy1DQ.png') 30 round;
   background-color: #fff2e5;
 }
 
 /* ======= Різні радіуси кутів ======= */
-.radius1 {
+.radius-one {
   border-radius: 10px;
 }
-.radius2 {
-  border-radius: 20px;
+.radius-two {
+  border-radius: 70px 0px;
 }
-.radius3 {
-  border-radius: 30px;
+.radius-three {
+  border-radius: 30px 150px;
 }
-.radius4 {
-  border-radius: 40px;
+.radius-four {
+  border-radius: 70px/25px;
 }
-.radius5 {
-  border-radius: 50px;
+.radius-five {
+  border-radius: 125px/75px 5px;
 }
-.radius6 {
-  border-radius: 60px;
+.radius-six {
+  border-bottom-right-radius: 100%;
+}
+
+.image-one {
+  border: 12px solid transparent;
+  border-image: url('Untitled.png') 16 round repeat;
+}
+.image-two {
+  border: 12px solid transparent;
+  border-image: url('Untitled2.png') 8 round;
+}
+.image-three {
+  border: 12px solid transparent;
+  border-image: url('Untitled.png') 16 stretch;
+}
+.image-four {
+  border: 12px solid transparent;
+  border-image-source: url('Untitled3.png');
+  border-image-slice: 1;     
+  border-image-repeat: repeat;
+  border-image-width: 12px;
+}
+.image-five {
+  border: 12px solid transparent;
+  border-image: url('Untitled1.1.png') 22 repeat;
+}
+.image-six {
+  border: 12px double;
+  border-image: url('Untitled2.png') 8 stretch;
 }
 
 /* Текст заголовка */
