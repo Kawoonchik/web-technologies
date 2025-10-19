@@ -98,10 +98,10 @@ header {
 
 .grad2 {
   background-image:
-    repeating-linear-gradient(45deg, purple 0 20px, white 20px 40px),
-    repeating-linear-gradient(-45deg, yellow 0 20px, transparent 20px 40px);
+    repeating-linear-gradient(45deg, purple 0 20px, #ffffff 20px 40px),
+    repeating-linear-gradient(-45deg, #ffe066 0 20px, transparent 20px 40px);
   background-size: 100px 100px;
-  background-blend-mode: multiply
+  background-blend-mode: multiply;
 }
 
 .grad3 {
