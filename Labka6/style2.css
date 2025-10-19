@@ -85,17 +85,29 @@ main {
 /* Помаранчеві блоки з border-image */
 .orange {
   border: 10px solid transparent;
-  border-image: url("https://i.imgur.com/H7Xy1DQ.png") 30 round;
+  border-image: url('https://i.imgur.com/H7Xy1DQ.png') 30 round;
   background-color: #fff2e5;
 }
 
 /* ======= Різні радіуси кутів ======= */
-.radius1 { border-radius: 10px; }
-.radius2 { border-radius: 20px; }
-.radius3 { border-radius: 30px; }
-.radius4 { border-radius: 40px; }
-.radius5 { border-radius: 50px; }
-.radius6 { border-radius: 60px; }
+.radius1 {
+  border-radius: 10px;
+}
+.radius2 {
+  border-radius: 20px;
+}
+.radius3 {
+  border-radius: 30px;
+}
+.radius4 {
+  border-radius: 40px;
+}
+.radius5 {
+  border-radius: 50px;
+}
+.radius6 {
+  border-radius: 60px;
+}
 
 /* Текст заголовка */
 .block h3 {
