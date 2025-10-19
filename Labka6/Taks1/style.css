@@ -1,0 +1,85 @@
+/* Початкові налаштування */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fffaf5;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1140px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Шапка */
+header {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.logo {
+  float: left;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.menu {
+  float: right;
+  margin-top: 15px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  background-color: #e65500;
+}
+
+/* Основна частина */
+.text-columns {
+  column-count: 3;
+  column-gap: 35px;
+  column-rule: 5px dotted red;
+  text-align: justify;
+}
+
+/* Зображення з float */
+.img-left {
+  float: left;
+  width: 200px;
+  margin: 10px 20px 10px 0;
+}
+
+.img-right {
+  float: right;
+  width: 200px;
+  margin: 10px 0 10px 20px;
+}
