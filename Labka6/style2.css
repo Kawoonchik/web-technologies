@@ -132,7 +132,7 @@ main {
 }
 .image-five {
   border: 12px solid transparent;
-  border-image: url('Patern.png') 48 repeat stretch;
+  border-image: url('Patern2.png') 16 repeat stretch;
 }
 .image-six {
   border: 12px double;
