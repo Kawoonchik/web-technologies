@@ -112,8 +112,8 @@ main {
 }
 
 .image-one {
-  border: 12px solid transparent;
-  border-image: url('Untitled.png') 16 round repeat;
+  border: 12px double;
+  border-image: url('Patern2.png') 10 stretch stretch;
 }
 .image-two {
   border: 12px solid transparent;
@@ -125,10 +125,7 @@ main {
 }
 .image-four {
   border: 12px solid transparent;
-  border-image-source: url('Untitled3.png');
-  border-image-slice: 1;     
-  border-image-repeat: repeat;
-  border-image-width: 12px;
+  border-image: url('Patern2.png') 16 stretch stretch;
 }
 .image-five {
   border: 12px solid transparent;
@@ -136,7 +133,7 @@ main {
 }
 .image-six {
   border: 12px double;
-  border-image: url('Untitled2.png') 8 stretch;
+  border-image: url('Patern2.png') 8 repeat round;
 }
 
 /* Текст заголовка */
