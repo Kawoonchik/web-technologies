@@ -1,15 +1,14 @@
-/* Батьківський контейнер */
+
 .container {
   position: relative;
   align-self: center;
   width: 50%;
   height: 400px;
-  text-align: center;   /* центрує вміст по горизонталі */
+  text-align: center;   
   margin: 100px auto;
   border: 1px solid black;
 }
 
-/* Загальний стиль усіх блоків */
 .block {
   margin: 25px auto;
   border: 1px solid black;
@@ -20,12 +19,9 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* для точного центру */
+  transform: translateX(-50%); 
 }
 
-/* --- Розміри та кольори блоків --- */
-
-/* Блок 1 */
 .block-one {
   width: 150px;
   height: 40px;
@@ -34,7 +30,6 @@
   z-index: 3;
 }
 
-/* Блок 2 */
 .block-two {
   width: 250px;
   height: 60px;
@@ -45,7 +40,6 @@
   z-index: 2;
 }
 
-/* Блок 3 */
 .block-three {
   width: 350px;
   height: 80px;
@@ -56,15 +50,11 @@
   z-index: 1;
 }
 
-/* --- Взаємодія при наведенні --- */
-
-/* Коли наводимо на Блок 1 → показати Блок 2 */
 .block-one:hover + .block-two {
   opacity: 1;
   visibility: visible;
 }
 
-/* Коли наводимо на Блок 2 → показати Блок 3 */
 .block-two:hover + .block-three {
   opacity: 1;
   visibility: visible;
