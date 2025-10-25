@@ -97,21 +97,18 @@ header {
 }
 
 .grad2 {
-background-color: #eee;
-background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
-linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
-background-size: 60px 60px;
-background-position: 0 0, 30px 30px;
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(45deg, green 20%, transparent 25%, transparent 75%, orange 75%, blue),
+    linear-gradient(45deg, yellow 20%, transparent 25%, transparent 75%, purple 75%, orange);
+  background-size: 100px 100px;
+  background-position: 0 0, 50px 50px;
 }
 
 .grad3 {
-  background-image: repeating-linear-gradient(
-    to right,
-    green 0px 17px,
-    white 17px 20px,
-    blue 20px 30px,
-    yellow 30px 40px
-  );
+  background-size: 100px;
+  background-image: 
+    repeating-linear-gradient(90deg, #118902, #ffffff 50%, #0102fc 50%, #fbfa00);
 }
 
 .grad4 {
