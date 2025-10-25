@@ -108,7 +108,7 @@ header {
 .grad3 {
   background-size: 100px;
   background-image: 
-    repeating-linear-gradient(90deg, #118902, #ffffff 50%, #0102fc 50%, #fbfa00);
+    repeating-linear-gradient(90deg, green, white 50%, blue 50%, yellow);
 }
 
 .grad4 {
