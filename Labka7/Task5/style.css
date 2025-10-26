@@ -1,17 +1,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #d0d0d0;
-
   padding-top: 100px;
 }
-.weather-widget {
+
+.climate-block {
   position: relative;
   width: 250px;
   height: 250px;
   margin: 0 auto;
 }
 
-.widget-main {
+.climate-core {
   position: relative;
   width: 220px;
   height: 200px;
@@ -21,14 +21,14 @@ body {
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-.arrow-nav {
+.nav-arrows {
   position: absolute;
   top: 60px;
   left: -40px;
   background: rgba(255, 255, 255, 0.3);
 }
 
-.arrow-nav span {
+.nav-arrows span {
   display: inline-block;
   padding: 5px 8px;
   color: black;
@@ -36,11 +36,11 @@ body {
   font-size: 22px;
 }
 
-.arrow-nav span:hover {
+.nav-arrows span:hover {
   opacity: 1;
 }
 
-.temperature {
+.temp-value {
   position: absolute;
   bottom: 10px;
   left: 15px;
@@ -48,7 +48,7 @@ body {
   font-weight: 300;
 }
 
-.weather-icon {
+.climate-icon {
   position: absolute;
   top: 20px;
   right: -30px;
@@ -57,7 +57,7 @@ body {
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.5));
 }
 
-.widget-forecast {
+.forecast-section {
   position: absolute;
   bottom: -5px;
   right: -80px;
@@ -69,33 +69,32 @@ body {
   padding: 10px;
 }
 
-.forecast-list {
+.forecast-items {
   list-style: none;
   padding: 0;
   margin-top: 60px;
 }
 
-.forecast-list::after {
+.forecast-items::after {
   content: '';
   display: table;
   clear: both;
 }
 
-.forecast-day {
+.forecast-entry {
   float: left;
   width: 20%;
-
   text-align: center;
   color: #333;
 }
 
-.forecast-day .day-name {
+.forecast-entry .entry-day {
   display: block;
   font-size: 12px;
   font-weight: bold;
 }
 
-.forecast-day .day-temp {
+.forecast-entry .entry-temp {
   display: block;
   font-size: 16px;
   margin-top: 4px;
