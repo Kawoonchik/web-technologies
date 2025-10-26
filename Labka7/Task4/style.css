@@ -5,10 +5,10 @@ body {
 
 /*горизонтальна навігація*/
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: #444;
-  z-index: 1;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -71,6 +71,12 @@ body {
   display: block;
 }
 
+.navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*вертикальна навігація*/
 .sidebar {
   position: fixed;
@@ -127,6 +133,5 @@ body {
 
 .content {
   margin-left: 240px;
-  margin-top: 140px;
   padding: 20px;
 }
