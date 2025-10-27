@@ -29,7 +29,6 @@ body {
 }
 
 .nav-arrows span {
-  display: inline-block;
   padding: 5px 8px;
   color: black;
   opacity: 0.7;
@@ -89,13 +88,11 @@ body {
 }
 
 .forecast-entry .entry-day {
-  display: block;
   font-size: 12px;
   font-weight: bold;
 }
 
 .forecast-entry .entry-temp {
-  display: block;
   font-size: 16px;
   margin-top: 4px;
 }

@@ -3,11 +3,17 @@ body {
   font-family: Arial, sans-serif;
 }
 
+.icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
 /*горизонтальна навігація*/
 .navbar {
   position: sticky;
   top: 0;
-  background-color: #444;
+  background-color: #858585;
   z-index: 1000;
   width: 100%;
 }
@@ -100,7 +106,7 @@ body {
 }
 
 .sidebar a {
-  display: flex;
+  display: block;
   align-items: center;
   color: white;
   text-decoration: none;

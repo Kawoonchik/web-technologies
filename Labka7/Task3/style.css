@@ -55,7 +55,6 @@ h1::after {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   height: 2px;
   background-color: red;
   transition: all 0.4s ease;
@@ -92,7 +91,6 @@ h1::after {
   top: auto;
   bottom: -10px;
   background-color: limegreen;
-  transform: translateY(0);
 }
 
 .inputs-layout {
@@ -244,15 +242,6 @@ textarea:hover {
   background-color: #014950;
   border-radius: 25px;
   position: relative;
-}
-
-.button:active::after {
-  content: "»";
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 24px;
 }
 
 .control-reset:active::after {
