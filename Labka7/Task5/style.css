@@ -1,14 +1,15 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #d0d0d0;
-  padding-top: 100px;
+   padding-top: 100px;
 }
 
 .climate-block {
+  padding: 10px 60px 20px 60px;
   position: relative;
   width: 250px;
   height: 250px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  background: #d0d0d0;
 }
 
 .climate-core {

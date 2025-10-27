@@ -112,7 +112,13 @@ header {
 }
 
 .grad4 {
-  background: linear-gradient(135deg, #ff9900, #ffff00 50%, #00cc00);
+  float: left;
+  background: linear-gradient(to top left, #ff0 50%, transparent 50.1%) bottom right / 70% 70%
+      no-repeat,
+    linear-gradient(to top right, #008000 50%, transparent 50.1%) bottom left / 50% 50% no-repeat,
+    radial-gradient(circle at top left, orange 0%, transparent 70%),
+    radial-gradient(circle at top right, blue 0%, transparent 70%),
+    radial-gradient(circle at bottom, white 0%, transparent 70%);
 }
 
 .grad5 {
