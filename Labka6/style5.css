@@ -90,13 +90,13 @@ header {
 }
 
 /* Градієнти */
-.grad1 {
+.grad-one {
   background-image: linear-gradient(to right, yellow, blue),
     radial-gradient(circle at top left, red, transparent);
   background-blend-mode: screen;
 }
 
-.grad2 {
+.grad-two {
   background-color: #ffffff;
   background-image:
     linear-gradient(45deg, green 20%, transparent 25%, transparent 75%, orange 75%, blue),
@@ -105,13 +105,13 @@ header {
   background-position: 0 0, 50px 50px;
 }
 
-.grad3 {
+.grad-three {
   background-size: 100px;
   background-image: 
     repeating-linear-gradient(90deg, green, white 50%, blue 50%, yellow);
 }
 
-.grad4 {
+.grad-four {
   float: left;
   background: linear-gradient(to top left, #ff0 50%, transparent 50.1%) bottom right / 70% 70%
       no-repeat,
@@ -121,7 +121,7 @@ header {
     radial-gradient(circle at bottom, white 0%, transparent 70%);
 }
 
-.grad5 {
+.grad-five {
   background-image: linear-gradient(
     to bottom,
     red,
