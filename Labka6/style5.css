@@ -98,8 +98,14 @@ header {
 
 .grad-two {
   background-color: #ffffff;
-  background-image:
-    linear-gradient(45deg, green 20%, transparent 25%, transparent 75%, orange 75%, blue),
+  background-image: linear-gradient(
+      45deg,
+      green 20%,
+      transparent 25%,
+      transparent 75%,
+      orange 75%,
+      blue
+    ),
     linear-gradient(45deg, yellow 20%, transparent 25%, transparent 75%, purple 75%, orange);
   background-size: 100px 100px;
   background-position: 0 0, 50px 50px;
@@ -107,8 +113,7 @@ header {
 
 .grad-three {
   background-size: 100px;
-  background-image: 
-    repeating-linear-gradient(90deg, green, white 50%, blue 50%, yellow);
+  background-image: repeating-linear-gradient(90deg, green, white 50%, blue 50%, yellow);
 }
 
 .grad-four {
@@ -122,16 +127,39 @@ header {
 }
 
 .grad-five {
-  background-image: linear-gradient(
-    to bottom,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
+  background: repeating-linear-gradient(
+      -190deg,
+      rgba(255, 0, 0, 0.5) 30px,
+      rgba(255, 153, 0, 0.5) 60px,
+      rgba(255, 255, 0, 0.5) 90px,
+      rgba(0, 255, 0, 0.5) 120px,
+      rgba(0, 0, 255, 0.5) 150px,
+      rgba(75, 0, 130, 0.5) 180px,
+      rgba(238, 130, 238, 0.5) 210px,
+      rgba(255, 0, 0, 0.5) 230px
+    ),
+    repeating-linear-gradient(
+      190deg,
+      rgba(240, 25, 25, 0.5) 40px,
+      rgba(255, 153, 0, 0.966) 80px,
+      rgba(255, 255, 0, 0.726) 120px,
+      rgba(0, 255, 0, 0.5) 160px,
+      rgba(0, 0, 255, 0.384) 200px,
+      rgba(76, 0, 130, 0.411) 240px,
+      rgba(250, 57, 250, 0.644) 280px,
+      rgba(255, 0, 0, 0.671) 300px
+    ),
+    repeating-linear-gradient(
+      23deg,
+      red 50px,
+      orange 100px,
+      yellow 150px,
+      green 200px,
+      blue 250px,
+      indigo 300px,
+      violet 350px,
+      red 370px
+    );
   background-blend-mode: overlay;
 }
 

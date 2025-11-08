@@ -61,7 +61,6 @@ header {
   background-color: #e65500;
 }
 
-/* ======= БЛОКИ ======= */
 main {
   overflow: hidden;
 }
@@ -76,7 +75,6 @@ main {
   min-height: 120px;
 }
 
-/* Зелені блоки */
 .green {
   border: 6px solid green;
   background-color: #eaffea;
@@ -86,12 +84,11 @@ main {
   border-color: green greenyellow;
   background-color: #eaffea;
 }
-/* Помаранчеві блоки з border-image */
+
 .orange {
   background-color: #fff2e5;
 }
 
-/* ======= Різні радіуси кутів ======= */
 .radius-one {
   border-radius: 10px;
 }
@@ -125,7 +122,7 @@ main {
 }
 .image-four {
   border: 12px solid transparent;
-  border-image: url('Patern2.png') 16 stretch stretch;
+  border-image: url('Untitled2.png') 16 stretch stretch;
 }
 .image-five {
   border: 12px solid transparent;
@@ -133,10 +130,9 @@ main {
 }
 .image-six {
   border: 12px double;
-  border-image: url('Patern2.png') 8 repeat round;
+  border-image: url('Patern2.png') 8 round;
 }
 
-/* Текст заголовка */
 .block h3 {
   margin-top: 0;
   color: #333;
@@ -144,7 +140,7 @@ main {
 }
 
 .clearfix::after {
-  content: "";
+  content: '';
   display: table;
   clear: both;
 }
