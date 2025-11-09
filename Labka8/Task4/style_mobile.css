@@ -23,6 +23,7 @@ body {
   position: relative;
   display: inline-block;
   letter-spacing: 1px;
+  text-align: start;
 }
 
 .services-title::after {
@@ -86,11 +87,8 @@ body {
   line-height: 1.6;
 }
 
-/* ===================================================== */
 /* TABLET — max-width: 768px (2 items per row) */
-/* ===================================================== */
 @media (max-width: 768px) {
-
   .service-card {
     flex: 1 1 calc(50% - 40px);
   }
@@ -104,11 +102,8 @@ body {
   }
 }
 
-/* ===================================================== */
 /* MOBILE — max-width: 576px (1 item per row) */
-/* ===================================================== */
 @media (max-width: 576px) {
-
   .service-card {
     flex: 1 1 100%;
   }
