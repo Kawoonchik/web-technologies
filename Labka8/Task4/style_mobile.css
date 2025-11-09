@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+
+/* SECTION */
+.services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* TITLE WITH ::after */
+.services-title {
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.services-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #d9534f;
+  margin: 10px auto 0 auto;
+}
+
+/* SUBTITLE */
+.services-subtitle {
+  max-width: 750px;
+  margin: 0 auto 60px;
+  font-size: 16px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* FLEX WRAPPER */
+.services-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* CARD */
+.service-card {
+  flex: 1 1 calc(25% - 40px);
+  text-align: center;
+}
+
+/* IMAGE PLACEHOLDER */
+.service-img {
+  width: 140px;
+  height: 140px;
+  background: #e5e5e5;
+  border-radius: 50%;
+  margin: 0 auto 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-size: 14px;
+}
+
+/* CARD TITLE */
+.service-card h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* CARD TEXT */
+.service-card p {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ===================================================== */
+/* TABLET — max-width: 768px (2 items per row) */
+/* ===================================================== */
+@media (max-width: 768px) {
+
+  .service-card {
+    flex: 1 1 calc(50% - 40px);
+  }
+
+  .services-title {
+    font-size: 22px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ===================================================== */
+/* MOBILE — max-width: 576px (1 item per row) */
+/* ===================================================== */
+@media (max-width: 576px) {
+
+  .service-card {
+    flex: 1 1 100%;
+  }
+
+  .service-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  .services-title {
+    font-size: 20px;
+  }
+
+  .services-subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
