@@ -11,6 +11,9 @@
   box-sizing: border-box;
 }
 
+/* =========================================================
+   HEADER + NAVIGATION
+   ========================================================= */
 header {
   font-family: var(--font-heading);
   width: 100%;
@@ -22,19 +25,9 @@ header {
   margin-bottom: 15px;
 }
 
-section {
-  margin-bottom: 15px;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
-}
-
-.body-container {
-  margin: 0 20vw 0 20vw;
-  display: flex;
-  flex-direction: column;
 }
 
 .nav-logo {
@@ -127,6 +120,7 @@ nav {
     hue-rotate(314deg) brightness(80%) contrast(104%);
 }
 
+/* ---------------- MEDIA: HEADER (MOBILE) ---------------- */
 @media (max-width: 768px) {
   header {
     top: 0;
@@ -228,11 +222,23 @@ nav {
   }
 }
 
+/* =========================================================
+   GLOBAL CONTAINERS
+   ========================================================= */
+.body-container {
+  margin: 0 20vw 0 20vw;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
 }
 
+/* =========================================================
+   JOURNAL / BLOG SECTION
+   ========================================================= */
 .journal-section {
   padding: 40px 0;
 }
@@ -321,6 +327,7 @@ nav {
   opacity: 0.8;
 }
 
+/* ---------------- MEDIA: JOURNAL ---------------- */
 @media (min-width: 577px) {
   .journal-card {
     flex-direction: row;
@@ -373,12 +380,16 @@ nav {
   }
 }
 
+/* =========================================================
+   PORTFOLIO / GALLERY
+   ========================================================= */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .header-title {
   font-weight: 700;
   font-size: 14px;
@@ -387,11 +398,13 @@ nav {
   color: #555555;
   position: relative;
 }
+
 .header-title::after {
   content: "--";
   color: var(--select-color);
   margin-left: 10px;
 }
+
 .filter-button {
   background-color: #ff5a5f;
   border: none;
@@ -401,14 +414,17 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .filter-button:hover {
   background-color: #e04e52;
 }
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
+
 .gallery-item {
   position: relative;
   flex: 1 1 calc(33.333% - 10px);
@@ -416,6 +432,7 @@ nav {
   cursor: pointer;
   overflow: visible;
 }
+
 .gallery-item img {
   width: 100%;
   display: block;
@@ -493,18 +510,21 @@ nav {
   margin-bottom: 4px;
   color: #fff;
 }
+
 .hover-info .contact {
   font-size: 12px;
   color: #38bfc9;
   text-decoration: none;
 }
 
+/* ---------------- MEDIA: PORTFOLIO ---------------- */
 @media (max-width: 768px) {
   .gallery-item {
     flex: 1 1 calc(50% - 10px);
     max-width: calc(50% - 10px);
   }
 }
+
 @media (max-width: 576px) {
   .gallery-item {
     flex: 1 1 100%;
@@ -512,21 +532,26 @@ nav {
   }
 }
 
+/* =========================================================
+   GLOBAL SECTION CONTAINER
+   ========================================================= */
 .section-container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
+/* =========================================================
+   INTRO / HERO SECTION
+   ========================================================= */
 .intro-banner {
   background-color: #f0f4f5;
   width: 100%;
-
   height: 200px;
   padding: 50px 0;
-
   display: flex;
   align-items: center;
+  margin: 20px 0px;
 }
 
 .intro-content-flex {
@@ -550,6 +575,7 @@ nav {
   margin: 0;
 }
 
+/* ---------------- CTA SECTION ---------------- */
 .cta-section {
   background-color: #ffffff;
   width: 100%;
@@ -598,28 +624,15 @@ nav {
   transform: translateY(1px);
 }
 
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .main-footer {
   background-color: #29292c;
   color: #bdc3c7;
   padding: 60px 0;
   text-align: center;
   width: 100%;
-}
-
-.copyright {
-  font-size: 0.8em;
-  margin-bottom: 15px;
-}
-
-.theme-link {
-  color: #bdc3c7;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.theme-link:hover,
-.theme-link:focus {
-  color: #e74c3c;
 }
 
 .social-icons {
@@ -641,62 +654,9 @@ nav {
   transition: transform 0.2s, opacity 0.2s;
 }
 
-.rss {
-  background-color: #f39c12;
-}
-
-.facebook {
-  background-color: #3498db;
-}
-
-.twitter {
-  background-color: #5dade2;
-}
-
-.dribbble {
-  background-color: #e85787;
-}
-
-.pinterest {
-  background-color: #e74c3c;
-}
-
-.social-icon:hover {
-  transform: scale(1.15);
-  opacity: 0.9;
-}
-
-.social-icon:focus {
-  outline: 2px solid white;
-  outline-offset: 1px;
-  transform: scale(1.15);
-}
-
-.social-icon:active {
-  transform: scale(1.05);
-  opacity: 0.7;
-}
-
-@media (max-width: 768px) {
-  .intro-banner {
-    height: auto;
-    padding: 80px 0;
-  }
-
-  .intro-content-flex {
-    justify-content: center;
-  }
-
-  .intro-text-wrapper {
-    max-width: 90%;
-    text-align: center;
-  }
-
-  .intro-title {
-    font-size: 2em;
-  }
-}
-
+/* =========================================================
+   SERVICES SECTION
+   ========================================================= */
 .services {
   max-width: 1200px;
   margin: 0 auto;
@@ -718,14 +678,6 @@ nav {
   color: var(--color-text);
   text-align: left;
   margin-bottom: 30px;
-}
-
-.services-subtitle {
-  max-width: 750px;
-  margin: 0 auto 60px;
-  font-size: 16px;
-  color: #777;
-  line-height: 1.6;
 }
 
 .services-list {
@@ -768,6 +720,7 @@ nav {
   line-height: 1.6;
 }
 
+/* ---------------- MEDIA: SERVICES ---------------- */
 @media (max-width: 768px) {
   .service-card {
     flex: 1 1 calc(50% - 40px);
