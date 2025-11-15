@@ -569,6 +569,11 @@ nav {
   font-weight: 300;
 }
 
+.intro-text-wrapper {
+  margin: 0 20vw 0 20vw;
+  display: flex;
+  flex-direction: column;
+}
 .intro-subtitle {
   font-size: 1em;
   color: #888;

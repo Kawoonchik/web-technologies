@@ -18,7 +18,7 @@ html {
   opacity: 0.8;
 }
 
-/* --- MAIN WIDGET --- */
+/*main*/
 
 .widget {
   display: flex;
@@ -27,7 +27,7 @@ html {
   padding: 0 15px;
 }
 
-/* --- CURRENT WEATHER --- */
+/*curent*/
 
 .current {
   display: flex;
@@ -78,7 +78,7 @@ h2 span.text-secondary {
   display: flex;
 }
 
-/* --- WEEK FORECAST --- */
+/*week forecast */
 
 .week {
   display: flex;
