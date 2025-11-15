@@ -1,0 +1,104 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+}
+/* --- СТИЛІ СІТКИ (Найважливіше) --- */
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 3fr 2fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-large {
+    grid-column: span 2;
+}
+
+.large-image {
+    height: 70%;
+}
+.card .large-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* --- Стилі для карток (Для гарного вигляду) --- */
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; 
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.card-content h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+}
+
+.card-content p {
+    margin: 0 0 15px 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.card-button {
+    display: block;
+    background-color: #6c757d;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    margin-top: auto; 
+}
+
+.card-button:hover {
+    background-color: #5a6268;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 576px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-large {
+        grid-column: span 1;
+    }
+
+    .card img {
+        height: 180px;
+    }
+}
