@@ -1,0 +1,145 @@
+/* --- 1. Базові стилі --- */
+body {
+    /* Колір фону, як на скріншоті */
+    background-color: #fff9f9;
+    margin: 0;
+    padding: 1rem; /* Невеликий відступ від країв */
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- 2. Контейнер сітки --- */
+.grid-container {
+    display: grid;
+    height: 95vh; /* Розтягнемо на висоту екрану */
+    
+    /* Білі проміжки між блоками */
+    gap: 10px;
+
+    /* * ЛОГІКА СІТКИ:
+     * Ми ділимо всю сітку на найменші спільні елементи.
+     * Рядки: Найвища колонка (права) має 12 блоків. 
+     * Отже, наша сітка має 12 рядків.
+     * Колонки: Всього 6 колонок різної ширини.
+     */
+
+    /* Визначаємо 12 рядків однакової висоти */
+    grid-template-rows: repeat(12, 1fr);
+
+    /* Визначаємо 6 колонок з пропорційною шириною (підібрано візуально) */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    
+    /* * НАЛАШТУВАННЯ ЛІЧИЛЬНИКА (Generated Content):
+     * 1. Ініціалізуємо лічильник з іменем 'block-counter'
+     */
+    counter-reset: block-counter;
+}
+
+/* --- 3. Стилі блоків --- */
+.grid-item {
+    background-color: #f7d748; /* Жовтий колір блоків */
+    position: relative; /* Потрібно для позиціонування номера */
+    
+    /* Для наочності додамо мінімальні розміри */
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* --- 4. Нумерація (Generated Content) --- */
+.grid-item::before {
+    /* 2. Збільшуємо лічильник для кожного елемента */
+    counter-increment: block-counter;
+    
+    /* 3. Виводимо значення лічильника */
+    content: counter(block-counter);
+
+    /* Стилізація номера (як на скріншоті) */
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+/* --- 5. Розміщення блоків по сітці --- */
+/* * Ми використовуємо grid-row та grid-column.
+ * 'span X' означає "розтягнути на X треків (рядків/колонок)".
+ */
+
+/* Колонка 1 */
+.grid-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: span 12; /* <--- Цей рядок "розтягує" блок 1 */
+}
+
+/* Колонка 2 */
+.grid-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: span 6; /* <--- Розтягує блок 2 */
+}
+.grid-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: span 6; /* <--- Розтягує блок 3 */
+}
+
+/* Колонка 3 */
+.grid-item:nth-child(4) {
+    grid-column: 3;
+    grid-row: span 3;
+}
+.grid-item:nth-child(5) {
+    grid-column: 3;
+    grid-row: span 4;
+}
+.grid-item:nth-child(6) {
+    grid-column: 3;
+    grid-row: span 5;
+}
+
+/* Колонка 4 */
+.grid-item:nth-child(7) {
+    grid-column: 4;
+    grid-row: span 2;
+}
+.grid-item:nth-child(8) {
+    grid-column: 4;
+    grid-row: span 3;
+}
+.grid-item:nth-child(9) {
+    grid-column: 4;
+    grid-row: span 3;
+}
+.grid-item:nth-child(10) {
+    grid-column: 4;
+    grid-row: span 4;
+}
+
+/* Колонка 5 */
+.grid-item:nth-child(11) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+.grid-item:nth-child(12) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+.grid-item:nth-child(13) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+.grid-item:nth-child(14) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+.grid-item:nth-child(15) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+.grid-item:nth-child(16) {
+    grid-column: 5;
+    grid-row: span 2;
+}
+
