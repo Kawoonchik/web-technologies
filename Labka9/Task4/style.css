@@ -4,7 +4,6 @@ body {
     margin: 0;
     padding: 2rem;
 }
-/* --- СТИЛІ СІТКИ (Найважливіше) --- */
 
 .card-container {
     display: grid;
@@ -28,9 +27,6 @@ body {
     object-fit: cover;
     display: block;
 }
-
-
-/* --- Стилі для карток (Для гарного вигляду) --- */
 
 .card {
     background-color: #ffffff;

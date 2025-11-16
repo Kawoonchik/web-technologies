@@ -1,174 +1,163 @@
-/* --- 1. Базові стилі --- */
 body {
-    background-color: #fff9f9;
-    margin: 0;
-    padding: 1rem;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    box-sizing: border-box;
+  background-color: #fff9f9;
+  margin: 0;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* --- 2. Контейнер сітки --- */
 .grid-container {
-    display: grid;
-    height: 95vh;
-    gap: 10px;
-
-    /* 12 рядків */
-    grid-template-rows: repeat(12, 1fr);
-
-    /* 6 колонок */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-
-    counter-reset: block-counter;
+  display: grid;
+  height: 95vh;
+  gap: 10px;
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  counter-reset: block-counter;
 }
 
-/* --- 3. Блоки --- */
 .grid-item {
-    background-color: #f7d748;
-    position: relative;
+  background-color: #f7d748;
+  position: relative;
 
-    min-width: 20px;
-    min-height: 20px;
+  min-width: 20px;
+  min-height: 20px;
 }
 
-/* Нумерація */
 .grid-item::before {
-    counter-increment: block-counter;
-    content: counter(block-counter);
+  counter-increment: block-counter;
+  content: counter(block-counter);
 
-    position: absolute;
-    top: 8px;
-    left: 10px;
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
-    opacity: 0.8;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.8;
 }
-
-/* --- 4. Розташування блоків --- */
 
 /* Колонка 1 */
 .grid-item:nth-child(1) {
-    grid-column: 1;
-    grid-row: span 12;
+  grid-column: 1;
+  grid-row: span 12;
 }
 
 /* Колонка 2 */
 .grid-item:nth-child(2) {
-    grid-column: 2;
-    grid-row: span 6;
+  grid-column: 2;
+  grid-row: span 6;
 }
 .grid-item:nth-child(3) {
-    grid-column: 2;
-    grid-row: span 6;
+  grid-column: 2;
+  grid-row: span 6;
 }
 
 /* Колонка 3 */
 .grid-item:nth-child(4) {
-    grid-column: 3;
-    grid-row: 1/span 4;
+  grid-column: 3;
+  grid-row: 1 / span 4;
 }
 .grid-item:nth-child(5) {
-    grid-column: 3;
-    grid-row: 5/span 4;
+  grid-column: 3;
+  grid-row: 5 / span 4;
 }
 .grid-item:nth-child(6) {
-    grid-column: 3;
-    grid-row: 9/span 4;
+  grid-column: 3;
+  grid-row: 9 / span 4;
 }
 
 /* Колонка 4 */
 .grid-item:nth-child(7) {
-    grid-column: 4;
-    grid-row: 1/span 3;
+  grid-column: 4;
+  grid-row: 1 / span 3;
 }
 .grid-item:nth-child(8) {
-    grid-column: 4;
-    grid-row: 4/span 3;
+  grid-column: 4;
+  grid-row: 4 / span 3;
 }
 .grid-item:nth-child(9) {
-    grid-column: 4;
-    grid-row: 7/span 3;
+  grid-column: 4;
+  grid-row: 7 / span 3;
 }
 .grid-item:nth-child(10) {
-    grid-column: 4;
-    grid-row: 10/span 3;
+  grid-column: 4;
+  grid-row: 10 / span 3;
 }
 
 /* Колонка 5 */
 .grid-item:nth-child(11) {
-    grid-column: 5;
-    grid-row: 1/span 2;
+  grid-column: 5;
+  grid-row: 1 / span 2;
 }
 .grid-item:nth-child(12) {
-    grid-column: 5;
-    grid-row: 3/span 2;
+  grid-column: 5;
+  grid-row: 3 / span 2;
 }
 .grid-item:nth-child(13) {
-    grid-column: 5;
-    grid-row: 5/span 2;
+  grid-column: 5;
+  grid-row: 5 / span 2;
 }
 .grid-item:nth-child(14) {
-    grid-column: 5;
-    grid-row: 7/span 2;
+  grid-column: 5;
+  grid-row: 7 / span 2;
 }
 .grid-item:nth-child(15) {
-    grid-column: 5;
-    grid-row: 9/span 2;
+  grid-column: 5;
+  grid-row: 9 / span 2;
 }
 .grid-item:nth-child(16) {
-    grid-column: 5;
-    grid-row: 11/span 2;
+  grid-column: 5;
+  grid-row: 11 / span 2;
 }
 
-
+/* Колонка 6 */
 .grid-item:nth-child(17) {
-    grid-column: 6;
-    grid-row: 1/span 1; 
+  grid-column: 6;
+  grid-row: 1 / span 1;
 }
 
 .grid-item:nth-child(18) {
-    grid-column: 6;
-    grid-row: 2/span 1; 
+  grid-column: 6;
+  grid-row: 2 / span 1;
 }
 .grid-item:nth-child(19) {
-    grid-column: 6;
-    grid-row: 3/span 1; 
+  grid-column: 6;
+  grid-row: 3 / span 1;
 }
 .grid-item:nth-child(20) {
-    grid-column: 6;
-    grid-row: 4/span 1; 
+  grid-column: 6;
+  grid-row: 4 / span 1;
 }
 .grid-item:nth-child(21) {
-    grid-column: 6;
-    grid-row: 5/span 1; 
+  grid-column: 6;
+  grid-row: 5 / span 1;
 }
 .grid-item:nth-child(22) {
-    grid-column: 6;
-    grid-row: 6/span 1; 
+  grid-column: 6;
+  grid-row: 6 / span 1;
 }
 .grid-item:nth-child(23) {
-    grid-column: 6;
-    grid-row: 7/span 1; 
+  grid-column: 6;
+  grid-row: 7 / span 1;
 }
 .grid-item:nth-child(24) {
-    grid-column: 6;
-    grid-row: 8/span 1; 
+  grid-column: 6;
+  grid-row: 8 / span 1;
 }
 .grid-item:nth-child(25) {
-    grid-column: 6;
-    grid-row: 9/span 1; 
+  grid-column: 6;
+  grid-row: 9 / span 1;
 }
 .grid-item:nth-child(26) {
-    grid-column: 6;
-    grid-row: 10/span 1; 
+  grid-column: 6;
+  grid-row: 10 / span 1;
 }
 .grid-item:nth-child(27) {
-    grid-column: 6;
-    grid-row: 11/span 1; 
+  grid-column: 6;
+  grid-row: 11 / span 1;
 }
 .grid-item:nth-child(28) {
-    grid-column: 6;
-    grid-row: 12/span 1; 
+  grid-column: 6;
+  grid-row: 12 / span 1;
 }
