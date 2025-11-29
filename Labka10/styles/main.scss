@@ -9,7 +9,7 @@ body {
 .container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 ($gutter / 2); 
+  padding: 0 toRem($gutter / 2);
   width: 100%;
 }
 
@@ -44,13 +44,15 @@ body {
   }
 
   &__phone {
-    display: flex; 
-    align-items: center;
+    @include flex-center; 
+    @include text-style(14, bold); 
     gap: 10px;
-    text-decoration: none;
-    color: $color-black;
-    font-size: 14px;
-    font-weight: bold;
+  }
+
+  &__icon {
+    width: 24px; 
+    height: 24px;
+    display: block;
   }
 
   &__menu-btn {
@@ -58,6 +60,29 @@ body {
     border: none;
     cursor: pointer;
     font-size: 24px; 
+
+    .icon-default {
+      display: block; 
+      width: 24px; 
+      height: 24px; 
+    }
+    
+    .icon-hover {
+      display: none;
+      width: 24px; 
+      height: 24px;
+    }
+
+    &:hover {
+
+      .icon-default {
+        display: none;  
+      }
+      
+      .icon-hover {
+        display: block; 
+      }
+    }
   }
 }
 
@@ -75,7 +100,7 @@ body {
 
   &__title {
     color: $color-white; 
-    font-size: 64px; 
+    font-size: toRem(64);
     line-height: 1.1;
     font-weight: bold;
   }

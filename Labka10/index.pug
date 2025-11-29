@@ -3,7 +3,7 @@ html(lang="uk")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Bang & Olufsen Clone
+    title Bang & Olufsen 
     link(rel="stylesheet", href="./styles/main.scss")
   body
     //- Header
@@ -13,9 +13,10 @@ html(lang="uk")
         
         .header__actions
           a.header__phone(href="tel:+12345555555") +1 234 555-55-55
-            span.icon-phone 📞 
-          button.header__menu-btn
-            span.icon-menu ☰
+            img.header__icon(src="images/phone.png", alt="Phone")
+            button.header__menu-btn
+              img.icon-default(src="images/menu.png", alt="Menu")
+              img.icon-hover(src="images/menu_hover.png", alt="Menu Active")
 
     main
       //- Hero

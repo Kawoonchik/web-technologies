@@ -1,0 +1,11 @@
+var menuItems = [
+    { text: 'Speakers', link: '#' },
+    { text: 'Headphones', link: '#' },
+    { text: 'Support', link: '#' }
+  ]
+
+nav.nav.header__nav
+  ul.nav__list
+    each item in menuItems
+      li.nav__item
+        a.nav__link(href=item.link)= item.text

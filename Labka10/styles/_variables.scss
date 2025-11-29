@@ -10,3 +10,20 @@ $color-gray-light: #f5f5f5;
 
 // Шрифти
 $font-primary: 'Arial', sans-serif; 
+
+$base-font-size: 16px;
+
+@function toRem($px) {
+  @return ($px / $base-font-size) * 1rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin text-style($size, $weight: normal) {
+  font-size: toRem($size);
+  font-weight: $weight;
+}

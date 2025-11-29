@@ -1,0 +1,16 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Bang & Olufsen Clone
+    link(rel="stylesheet", href="./styles/main.scss")
+  body
+    //- Тут ми підключаємо хедер, бо він є на всіх сторінках
+    include components/header
+
+    //- А це "дірка", куди інші сторінки будуть вставляти свій контент
+    block content
+
+    //- Тут буде футер
+    include components/footer
