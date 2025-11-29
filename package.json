@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Kawoonchik/web-technologies#readme",
   "devDependencies": {
     "@parcel/transformer-pug": "^2.16.1",
+    "@parcel/transformer-sass": "^2.16.1",
     "parcel": "^2.16.1"
   }
 }
