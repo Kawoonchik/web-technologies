@@ -1,0 +1,28 @@
+{
+  "name": "web-technologies",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "parcel Labka10/index.pug",
+    "build": "parcel build Labka10/index.pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kawoonchik/web-technologies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Kawoonchik/web-technologies/issues"
+  },
+  "homepage": "https://github.com/Kawoonchik/web-technologies#readme",
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.16.1",
+    "parcel": "^2.16.1"
+  }
+}
