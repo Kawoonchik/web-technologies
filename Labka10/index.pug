@@ -3,8 +3,25 @@ html(lang="uk")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Моя велика сторінка
-    // Ось тут ми підключаємо SCSS файл, а не CSS!
+    title Bang & Olufsen Clone
     link(rel="stylesheet", href="./styles/main.scss")
   body
-    h1 Привіт, Pug та SASS!
+    //- Header
+    header.header
+      .container.header__container
+        a.header__logo(href="#") BANG & OLUFSEN
+        
+        .header__actions
+          a.header__phone(href="tel:+12345555555") +1 234 555-55-55
+            span.icon-phone 📞 
+          button.header__menu-btn
+            span.icon-menu ☰
+
+    main
+      //- Hero
+      section.hero
+        .container.hero__container 
+          h1.hero__title
+            span Your senses.
+            br
+            span Set free.
