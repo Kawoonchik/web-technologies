@@ -176,7 +176,7 @@ body {
 
 // categories-section
 .categories {
-  padding: toRem(100) toRem(15);
+  padding: toRem(100) 0;
 
   &__list {
     display: flex;          
@@ -189,9 +189,19 @@ body {
   &__actions {
     display: flex;
     justify-content: start;
+
+    .btn {
+      width: 100%; 
+    
+      $btn-span: 4;
+      $btn-width: ($btn-span * $col-width) + (($btn-span - 1) * $gutter);
+      
+      max-width: toRem($btn-width);
+      
+      box-sizing: border-box;
   }
 }
-
+}
 // item
 .category-item {
     flex: 1;
@@ -277,17 +287,20 @@ body {
 }
 
 .text-block {
-  padding: toRem(100) toRem(15); 
+  padding: toRem(100) 0; 
   background-color: #faf9dd;
 
   &__wrapper {
     display: flex;
     justify-content: space-between; 
-    gap: toRem(40); 
+    align-items: flex-start;
   }
 
   &__title {
-    flex: 1;   
+    $title-span: 6;
+    $title-width: ($title-span * $col-width) + (($title-span - 1) * $gutter);
+    
+    flex: 0 1 toRem($title-width);   
     min-width: 0; 
     
     font-size: toRem(40);
@@ -299,7 +312,10 @@ body {
   }
 
   &__desc {
-    flex: 1;      
+    $desc-span: 5;
+    $desc-width: ($desc-span * $col-width) + (($desc-span - 1) * $gutter);
+
+    flex: 0 1 toRem($desc-width);   
     min-width: 0; 
     
     font-size: toRem(16);
@@ -313,7 +329,7 @@ body {
 
 // contact-section
 .contact {
-  padding: toRem(100) toRem(15);
+  padding: toRem(100) 0;
 
   &__title {
     font-size: toRem(40);
@@ -321,35 +337,40 @@ body {
     text-transform: uppercase;
     margin-bottom: toRem(60);
     color: $color-black;
-    // text-align: center;
   }
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    gap: toRem(60); // Великий відступ між формою і текстом
-    margin-bottom: toRem(60); // Відступ до кнопки
+    align-items: flex-start;
+    margin-bottom: toRem(30); 
   }
 
   &__form {
-    flex: 1; 
+    $form-span: 6;
+    $form-width: ($form-span * $col-width) + (($form-span - 1) * $gutter);
+
+    flex: 0 1 toRem($form-width);
     display: flex;
     flex-direction: column;
     gap: toRem(30); 
   }
-
+  
+  &__textarea,
   &__input {
     width: 100%;
 
     color: rgb(184, 184, 184);
-    padding: toRem(15) 0; 
-    border: none;
+    border: 1px solid #E0E0E0;
     background: transparent;
-    border: 1px solid #ffffff;
+
     font-size: toRem(16);
     color: $color-black;
     font-family: inherit;
-    
+
+    padding: toRem(20); 
+    box-sizing: border-box;
+
     &::placeholder {
       color: #999;
       text-transform: uppercase;
@@ -367,20 +388,22 @@ body {
   }
 
   &__textarea {
-    min-height: toRem(60);
+    min-height: toRem(120);
     resize: vertical;      
   }
 
   &__info {
-    flex: 1;
-    padding-top: toRem(10); 
+    $info-span: 5;
+    $info-width: ($info-span * $col-width) + (($info-span - 1) * $gutter);
+
+    flex: 0 1 toRem($info-width);
+    min-width: 0;
   }
 
   &__text {
     font-size: toRem(16);
     line-height: 1.8;
     color: #666;
-    margin-bottom: toRem(30);
 
     a {
       text-decoration: none;
@@ -395,7 +418,7 @@ body {
   }
 
   &__details {
-    display: block; 
+    display: block;  
     margin-top: toRem(10); 
     color: $color-black;   
     font-style: normal;   
@@ -403,6 +426,15 @@ body {
 
   &__actions {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
+
+    .btn {
+      width: 100%;
+      $btn-span: 6;
+      $btn-width: ($btn-span * $col-width) + (($btn-span - 1) * $gutter);
+      
+      max-width: toRem($btn-width);
+      box-sizing: border-box;
+    }
   }
 }
