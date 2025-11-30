@@ -1,4 +1,5 @@
 @import 'variables'; 
+@import '../normalize.css';
 
 // Загальні стилі
 body {
@@ -9,7 +10,6 @@ body {
 .container {
   max-width: $container-width;
   margin: 0 auto;
-  padding: 0 toRem($gutter / 2);
   width: 100%;
 }
 
@@ -104,5 +104,72 @@ body {
     font-size: toRem(80);
     line-height: 1.1;
     font-weight: bold;
+  }
+}
+
+// catalog-section
+.catalog {
+  padding: toRem(100) toRem(15); 
+
+  .section-title {
+    font-size: toRem(40);
+    font-weight: bold;
+    margin-bottom: toRem(60); 
+    color: $color-black;
+  }
+
+  &__grid {
+    display: grid;
+    // не менше ніж 300px кожна
+    grid-template-columns: repeat(auto-fit, minmax(toRem(350), 1fr));
+    gap: toRem($gutter); 
+  }
+}
+
+// product-card
+.product-card {
+  display: flex;
+  flex-direction: column;
+
+  &__image-wrapper {
+    background-color: #FBF5F6;
+    aspect-ratio: 1 / 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: toRem(24);
+    
+    img {
+      max-width: 80%; 
+      max-height: 80%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+  }
+
+  &__title {
+    font-size: toRem(18);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color-black;
+  }
+
+  &__desc {
+    font-size: toRem(16);
+    line-height: 1.5;
+    color: #555;
+  }
+
+  &__price {
+    font-size: toRem(16);
+    font-weight: bold;
+    color: $color-black;
+    margin-top: toRem(10);
   }
 }

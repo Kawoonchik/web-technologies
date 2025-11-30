@@ -1,0 +1,34 @@
+mixin product-card(image, title, description, price)
+  article.product-card
+    .product-card__image-wrapper
+      img.product-card__img(src=image, alt=title)
+    .product-card__content
+      h3.product-card__title= title
+      p.product-card__desc= description
+      p.product-card__price= price
+
+section.catalog
+  .container
+    h2.section-title Recommended
+    
+    .catalog__grid
+      +product-card(
+        './images/product1.png', 
+        'Beosound A5', 
+        'Huge sound anywhere – in the home or outdoors. Beosound A5 is a Wi-Fi and Bluetooth speaker with long-lasting battery and wireless charging built in.',
+        '$ 1299.00'
+      )
+
+      +product-card(
+        './images/product2.png', 
+        'Beoplay HX', 
+        'Wireless noise-cancelling headphones. Listen in comfort whether youre on a call, working from home or taking a moment for yourself.',
+        '$ 499.00'
+      )
+
+      +product-card(
+        './images/product3.png', 
+        'Beosound Theatre', 
+        'Four patent-pending acoustic innovations in one sleek soundbar envelop you in sound from every angle. Made to fit any TV, and last for generations.',
+        '$ 3199.00'
+      )
