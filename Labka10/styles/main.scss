@@ -176,13 +176,14 @@ body {
 
 // categories-section
 .categories {
-  padding: toRem(100) 0;
+  padding: toRem(100) toRem(15);
 
   &__list {
     display: flex;          
     gap: toRem(24);        
     justify-content: space-between; 
     margin-bottom: toRem(60);
+    flex-direction: column;
   }
 
   &__actions {
@@ -193,13 +194,13 @@ body {
 
 // item
 .category-item {
-  &__link {
+  
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     height: 100%;
-  }
+  
 
   &__images {
     display: flex;

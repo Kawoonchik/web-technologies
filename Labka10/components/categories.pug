@@ -1,9 +1,8 @@
 mixin category-item(img1, img2, title, linkText)
   article.category-item
-    a.category-item__link(href="#")
       .category-item__images
-        img.img-main(src=img1, alt=title)
-        img.img-secondary(src=img2, alt=title + " alt")
+        img.img(src=img1, alt=title)
+        img.img(src=img2, alt=title + " alt")
       
       .category-item__info
         h3.category-item__title= title
@@ -15,7 +14,7 @@ section.categories
     
     .categories__list
 
-    
+
         +category-item(
           './images/categories/cat1_1.png',
           './images/categories/cat1_2.png',
