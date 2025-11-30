@@ -310,3 +310,99 @@ body {
     
   }
 }
+
+// contact-section
+.contact {
+  padding: toRem(100) toRem(15);
+
+  &__title {
+    font-size: toRem(40);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: toRem(60);
+    color: $color-black;
+    // text-align: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: toRem(60); // Великий відступ між формою і текстом
+    margin-bottom: toRem(60); // Відступ до кнопки
+  }
+
+  &__form {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    gap: toRem(30); 
+  }
+
+  &__input {
+    width: 100%;
+
+    color: rgb(184, 184, 184);
+    padding: toRem(15) 0; 
+    border: none;
+    background: transparent;
+    border: 1px solid #ffffff;
+    font-size: toRem(16);
+    color: $color-black;
+    font-family: inherit;
+    
+    &::placeholder {
+      color: #999;
+      text-transform: uppercase;
+      font-size: toRem(12);
+      letter-spacing: 1px;
+    }
+
+    &:hover {
+      border-color: #999; 
+    } 
+
+    &:focus {
+      border-color: orange;
+    }
+  }
+
+  &__textarea {
+    min-height: toRem(60);
+    resize: vertical;      
+  }
+
+  &__info {
+    flex: 1;
+    padding-top: toRem(10); 
+  }
+
+  &__text {
+    font-size: toRem(16);
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: toRem(30);
+
+    a {
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+
+      &:hover {
+        border-color: #666;
+      }
+    }
+  }
+
+  &__details {
+    display: block; 
+    margin-top: toRem(10); 
+    color: $color-black;   
+    font-style: normal;   
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: start;
+  }
+}

@@ -1,0 +1,34 @@
+section.contact
+  .container
+    h2.contact__title Contact us
+
+    .contact__wrapper
+      form.contact__form
+        input.contact__input(type="text", placeholder="Your Name")
+        input.contact__input(type="email", placeholder="Email Address")
+        textarea.contact__input.contact__textarea(placeholder="Message", rows="1")
+
+      .contact__info
+        p.contact__text
+          | Phone: 
+          br
+          a(href="tel:+4512345678") +1 234 5555-55-55
+
+        p.contact__text
+          | Email: 
+          br
+          a(href="mailto:service@bang-olufsen.com") service@bang-olufsen.com
+
+        p.contact__text
+          | Address
+          br
+          span.contact__details
+              | 400 first ave.
+              br
+              | suite 700
+              br
+              | Minneapolis, MN 55401
+        
+
+    .contact__actions
+      button.btn--black(type="submit") Send message
