@@ -262,3 +262,51 @@ body {
     transform: translateY(2px); 
   }
 }
+
+.banner {
+  height: toRem(460);
+  width: 100%;
+  
+  background-image: url('../images/banner.png'); 
+  background-size: cover;        
+  background-position: center;  
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+}
+
+.text-block {
+  padding: toRem(100) toRem(15); 
+  background-color: #faf9dd;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between; 
+    gap: toRem(40); 
+  }
+
+  &__title {
+    flex: 1;   
+    min-width: 0; 
+    
+    font-size: toRem(40);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: $color-black;
+    
+  }
+
+  &__desc {
+    flex: 1;      
+    min-width: 0; 
+    
+    font-size: toRem(16);
+    line-height: 1.6;
+    color: #666;      
+    
+    max-width: toRem(500); 
+    
+  }
+}
