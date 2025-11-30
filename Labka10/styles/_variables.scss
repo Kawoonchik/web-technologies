@@ -1,8 +1,14 @@
 // Змінні 
-$container-width: 1260px;
-$gutter: 24px;
-$padding-mobile: 20px;
+$grid-columns: 12;      
+$col-width: 63px;      
+$gutter: 24px;          
+$grid-margin: 120px;
 
+
+$content-width: ($grid-columns * $col-width) + (($grid-columns - 1) * $gutter);
+
+$layout-width: $content-width + ($grid-margin * 2);
+$container-width: $content-width;
 // Кольори
 $color-black: #000000;
 $color-white: #ffffff;

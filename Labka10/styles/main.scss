@@ -109,20 +109,20 @@ body {
 
 // catalog-section
 .catalog {
-  padding: toRem(100) toRem(15); 
+  padding: toRem(100) 0; 
 
   .section-title {
     font-size: toRem(40);
     font-weight: bold;
-    margin-bottom: toRem(60); 
     color: $color-black;
   }
 
   &__grid {
     display: grid;
-    // не менше ніж 350px кожна
-    grid-template-columns: repeat(auto-fit, minmax(toRem(350), 1fr));
-    gap: toRem($gutter); 
+    $card-span: 4;
+    $card-width: ($card-span * $col-width) + (($card-span - 1) * $gutter);
+    gap: toRem($gutter);
+    grid-template-columns: repeat(auto-fit, minmax(toRem($card-width), 1fr)); 
   }
 }
 
