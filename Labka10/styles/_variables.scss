@@ -4,11 +4,24 @@ $col-width: 63px;
 $gutter: 24px;          
 $grid-margin: 120px;
 
-
 $content-width: ($grid-columns * $col-width) + (($grid-columns - 1) * $gutter);
-
 $layout-width: $content-width + ($grid-margin * 2);
 $container-width: $content-width;
+
+// tablet
+$bp-tablet: 744px;
+$tablet-container-width: 600px;
+$tablet-gutter: 64px;
+
+$tablet-col-width: ($tablet-container-width - (5 * $tablet-gutter)) / 6;
+
+// mobile
+$bp-mobile: 480px; 
+$mobile-container-width: 280px;
+$mobile-gutter: 20px;
+
+$mobile-col-width: 130px;
+
 // Кольори
 $color-black: #000000;
 $color-white: #ffffff;

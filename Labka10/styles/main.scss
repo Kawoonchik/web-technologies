@@ -8,9 +8,19 @@ body {
 }
 
 .container {
-  max-width: $container-width;
+  max-width: $container-width; // 1020px
   margin: 0 auto;
   width: 100%;
+
+  @media (max-width: 1000px) {
+    max-width: $tablet-container-width; // 600px
+    padding: 0;
+  }
+
+  @media (max-width: $bp-mobile) {
+    max-width: $mobile-container-width; // 280px
+    padding: 0;
+  }
 }
 
 // header
@@ -84,6 +94,10 @@ body {
       }
     }
   }
+
+@media (max-width: $bp-tablet) {
+    padding: toRem(20) 0;
+  }
 }
 
 // hero-section
@@ -105,6 +119,24 @@ body {
     line-height: 1.1;
     font-weight: bold;
   }
+
+    @media (max-width: $bp-tablet) {
+    background-size: cover;
+    background-position: center center;
+    
+    &__title {
+      font-size: toRem(60); 
+    }
+  }
+
+  @media (max-width: $bp-mobile) {
+    height: toRem(500); 
+    
+    &__title {
+      font-size: toRem(40);
+      letter-spacing: 0; 
+    }
+  }
 }
 
 // catalog-section
@@ -123,6 +155,17 @@ body {
     $card-width: ($card-span * $col-width) + (($card-span - 1) * $gutter);
     gap: toRem($gutter);
     grid-template-columns: repeat(auto-fit, minmax(toRem($card-width), 1fr)); 
+
+    @media (max-width: $bp-tablet) {
+      gap: toRem($tablet-gutter);
+
+      grid-template-columns: 1fr; 
+    }
+
+    @media (max-width: $bp-mobile) {
+      gap: toRem($mobile-gutter);
+      grid-template-columns: 1fr; 
+    }
   }
 }
 
@@ -184,6 +227,15 @@ body {
     justify-content: space-between; 
     margin-bottom: toRem(60);
     flex-direction: column;
+
+    @media (max-width: $bp-tablet) {
+      gap: toRem($tablet-gutter); // 64px
+      flex-direction: column;
+    }
+
+    @media (max-width: $bp-mobile) {
+      gap: toRem($mobile-gutter); // 20px
+    }
   }
 
   &__actions {
@@ -199,8 +251,18 @@ body {
       max-width: toRem($btn-width);
       
       box-sizing: border-box;
+    }
+
+    @media (max-width: $bp-tablet) {
+      .btn {
+        max-width: 100%; 
+      }
+    }
+
+    @media (max-width: $bp-mobile) {
+      max-width: 100%; 
+    }
   }
-}
 }
 // item
 .category-item {
@@ -222,7 +284,7 @@ body {
     img {
       width: 100%;
       height: 100%;
-      min-width: toRem(300);
+      min-width: toRem(50);
       background-color: #FBF5F6;
       object-fit: cover;
       display: block;
@@ -294,6 +356,16 @@ body {
     display: flex;
     justify-content: space-between; 
     align-items: flex-start;
+
+    @media (max-width: $bp-tablet) {
+      flex-direction: row; 
+      gap: toRem($tablet-gutter); 
+    }
+
+    @media (max-width: $bp-mobile) {
+      flex-direction: column; 
+      gap: toRem(30);
+    }
   }
 
   &__title {
@@ -323,7 +395,18 @@ body {
     color: #666;      
     
     max-width: toRem(500); 
-    
+  }
+
+  &__title,
+  &__desc {
+    @media (max-width: $bp-tablet) {
+      flex: 0 0 calc(50% - #{toRem($tablet-gutter / 2)});
+      min-width: 0;
+    }
+
+    @media (max-width: $bp-mobile) {
+      flex: 1 1 100%; 
+    }
   }
 }
 
@@ -344,6 +427,14 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: toRem(30); 
+
+    @media (max-width: $bp-tablet) {
+      display: contents;
+    }
+
+    @media (max-width: $bp-mobile) {
+      gap: toRem(40);
+    }
   }
 
   &__form {
@@ -354,7 +445,14 @@ body {
     display: flex;
     flex-direction: column;
     gap: toRem(30); 
-  }
+
+    @media (max-width: $bp-tablet) {
+      order: 1;       
+      width: 100%;   
+      flex: 0 0 100%;
+      margin-bottom: toRem(40); 
+    }
+  } 
   
   &__textarea,
   &__input {
@@ -398,6 +496,14 @@ body {
 
     flex: 0 1 toRem($info-width);
     min-width: 0;
+
+    @media (max-width: $bp-tablet) {
+      order: 3;       
+      width: 100%;
+      flex: 0 0 100%;
+      padding-top: 0;
+      text-align: left; 
+    }
   }
 
   &__text {
@@ -435,6 +541,39 @@ body {
       
       max-width: toRem($btn-width);
       box-sizing: border-box;
+    }
+
+    @media (max-width: $bp-tablet) {
+      order: 2;       
+      justify-content: center; 
+      margin-bottom: toRem(40); 
+      
+      .btn {
+        max-width: 100%; 
+        width: 100%;
+      }
+    }
+  }
+
+  .container {
+    @media (max-width: $bp-tablet) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  &__form,
+  &__info,
+  &__actions .btn {
+    @media (max-width: $bp-tablet) {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+
+    @media (max-width: $bp-mobile) {
+      flex: 1 1 100%;
+      width: 100%;
+      max-width: 100%;
     }
   }
 }
