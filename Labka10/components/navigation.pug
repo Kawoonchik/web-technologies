@@ -1,0 +1,17 @@
+- 
+  var menuItems = [
+    { name: 'Speakers', link: '#' },
+    { name: 'Headphones', link: '#' },
+    { name: 'Televisions', link: '#' },
+    { name: 'Soundbars', link: '#' },
+    { name: 'Support', link: '#' }
+  ]
+
+nav.nav
+  ul.nav__list
+    each item in menuItems
+      li.nav__item
+        if item.name == 'Headphones'
+          a.nav__link.nav__link--active(href=item.link)= item.name
+        else
+          a.nav__link(href=item.link)= item.name
