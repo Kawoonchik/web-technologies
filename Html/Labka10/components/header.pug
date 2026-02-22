@@ -1,8 +1,14 @@
 header.header
+  input#menu-toggle(type="checkbox", style="display: none;")
+
   .container.header__container
     a.header__logo(href="#") BANG & OLUFSEN
     
-    include navigation
+    .header__menu-overlay
+      .container
+        .header__overlay-top
+           a.header__logo(href="#") BANG & OLUFSEN
+        include navigation
     
     .header__actions
       .header__phone
