@@ -1,115 +1,63 @@
-// --- 1.1 Знайти максимальний та мінімальний елементи ---
-function getMinMax(arr) {
-    // У JS є вбудований об'єкт Math (як <cmath> у C++).
-    // Оператор '...' (spread) "розпаковує" масив, передаючи числа як окремі аргументи
-    let maxVal = Math.max(...arr); 
-    let minVal = Math.min(...arr);
-    
-    // Повертаємо об'єкт із двома значеннями (у C++ для цього б робили struct або std::pair)
-    return { max: maxVal, min: minVal };
+console.log("Завдання 1");
+let count = 0, a= 0, b = 1, sum=0;
+while (count < 10) {
+    sum += a;
+    let next = a + b;
+    a = b;
+    b = next;
+    count++;
 }
+console.log("Сума перших 10 чисел Фібоначчі:", sum); // 88
 
-console.log("Min/Max:", getMinMax([5, 12, -3, 8, 100])); // Виведе: {max: 100, min: -3}
-
-
-// --- 1.2 Порівняти два об'єкти за їхніми властивостями ---
-// У JS не можна просто написати obj1 == obj2 (це порівняє вказівники на пам'ять, як у C++)
-// Тому пишемо функцію для порівняння "нутрощів" (полів).
-function compareObjects(obj1, obj2) {
-    let keys1 = Object.keys(obj1); // Отримуємо масив ключів першого об'єкта
-    let keys2 = Object.keys(obj2);
-
-    if (keys1.length !== keys2.length) return false;
-
-    // Перевіряємо, чи співпадають значення для кожного ключа
-    for (let key of keys1) {
-        if (obj1[key] !== obj2[key]) {
-            return false;
-        }
+console.log("\nЗавдання 2");    
+function isPrime(num) {
+    if (num <= 1) return false; // 0 і 1 не прості числа
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
     }
-    return true;
+    return true; 
 }
-
-const student1 = { name: "Іван", age: 20 };
-const student2 = { name: "Іван", age: 20 };
-const student3 = { name: "Степан", age: 21 };
-
-console.log("Порівняння 1 і 2:", compareObjects(student1, student2)); // true
-console.log("Порівняння 1 і 3:", compareObjects(student1, student3)); // false
-
-// --- 2.1 Перевірка, чи число в діапазоні ---
-function isNumberInRange(num, min, max) {
-    // Логічне "І" (&&)
-    return (num >= min && num <= max);
-}
-
-console.log("Чи 15 в діапазоні [10, 20]:", isNumberInRange(15, 10, 20)); // true
-console.log("Чи 5 в діапазоні [10, 20]:", isNumberInRange(5, 10, 20));  // false
-
-
-// --- 2.2 Використання логічного NOT (!) ---
-let isRegistered = true;
-console.log("Початковий стан:", isRegistered); // true
-
-// Змінюємо стан на протилежний
-isRegistered = !isRegistered; 
-console.log("Після NOT (!):", isRegistered); // false
-
-// --- 3.1 Оцінка студента в словесному форматі (через IF) ---
-function getGradeIf(score) {
-    if (score >= 90 && score <= 100) {
-        return "відмінно";
-    } else if (score >= 75 && score < 90) {
-        return "добре";
-    } else if (score >= 60 && score < 75) {
-        return "задовільно";
-    } else {
-        return "незадовільно";
+let sumOfPrimes = 0;
+for (let i = 2; i < 1000; i++) {
+    if (isPrime(i)) {
+        sumOfPrimes += i;
     }
 }
+console.log("Сума простих чисел менших:", sumOfPrimes); // 76127
 
-// --- 3.1 Оцінка студента (через тернарний оператор "?") ---
-function getGradeTernary(score) {
-    // Синтаксис: умова ? якщо_так : якщо_ні
-    return (score >= 90 && score <= 100) ? "відмінно" :
-           (score >= 75 && score < 90) ? "добре" :
-           (score >= 60 && score < 75) ? "задовільно" : "незадовільно";
-}
-
-console.log("Оцінка 85 (if):", getGradeIf(85));       // добре
-console.log("Оцінка 85 (ternary):", getGradeTernary(85)); // добре
-
-
-// --- 3.2 Сезон за місяцем (Вкладені IF) ---
-function getSeasonIf(monthNumber) {
-    if (monthNumber === 12 || monthNumber === 1 || monthNumber === 2) {
-        return "Зима";
-    } else {
-        // Вкладений if
-        if (monthNumber >= 3 && monthNumber <= 5) {
-            return "Весна";
-        } else {
-            // Ще один вкладений if
-            if (monthNumber >= 6 && monthNumber <= 8) {
-                return "Літо";
-            } else {
-                if (monthNumber >= 9 && monthNumber <= 11) {
-                    return "Осінь";
-                } else {
-                    return "Некоректний місяць";
-                }
-            }
-        }
+console.log("\nЗавдання 3");
+function getDayOfWeek(dayNumber) {
+    switch (dayNumber) {
+        case 1: return "Понеділок";
+        case 2: return "Вівторок";
+        case 3: return "Середа";
+        case 4: return "Четвер";
+        case 5: return "П'ятниця";
+        case 6: return "Субота";
+        case 7: return "Неділя";
+        default: return "Некоректний номер дня тижня";
     }
 }
+console.log("День 3:", getDayOfWeek(3)); // Середа
 
-// --- 3.2 Сезон за місяцем (Вкладені тернарні оператори "?") ---
-function getSeasonTernary(monthNumber) {
-    return (monthNumber === 12 || monthNumber === 1 || monthNumber === 2) ? "Зима" :
-           ((monthNumber >= 3 && monthNumber <= 5) ? "Весна" :
-           ((monthNumber >= 6 && monthNumber <= 8) ? "Літо" :
-           ((monthNumber >= 9 && monthNumber <= 11) ? "Осінь" : "Некоректний місяць")));
+console.log("\nЗавдання 4");
+function filterOddLeghtStrings(arr) {
+    return arr.filter(str => str.length % 2 !== 0);
 }
+const strings = ["яблуко", "кіт", "JavaScript", "is", "fun"];
+console.log("Масив слів:", strings);
+console.log("Слова з непарною кількістю символів:", filterOddLeghtStrings(strings)); // ["яблуко", "JavaScript", "is", "fun"]
 
-console.log("Місяць 4 (if):", getSeasonIf(4));            // Весна
-console.log("Місяць 10 (ternary):", getSeasonTernary(10)); // Осінь
+console.log("\nЗавдання 5");    
+const incrementNumbers = (arr) => arr.map(num => num + 1);
+const numbers = [1, 2, 3, 4, 5];
+console.log("Початковий масив:", numbers);
+console.log("Масив після інкременту:", incrementNumbers(numbers));
+
+console.log("Завдання 6"); 
+function checkTen(num1, num2) {
+    return (num1 + num2 === 10) || (Math.abs(num1 + num2) === 10);
+}
+console.log("6 + 4:", checkTen(6, 4)); // true
+console.log("-5 + 15:", checkTen(-5, 15)); // true
+console.log("3 + 2:", checkTen(3, 2)); // false
