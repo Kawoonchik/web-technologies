@@ -67,9 +67,111 @@ function task4() {
         { name: 'Ганна', age: 21, course: 3 }
     ];
     console.log("Студенти:", students);
+
+    students = students.filter(student => student.name !== 'Анна');
+
+    students.push({ name: 'Єгорчик', age: 19, course: 2 });
+
+    students.sort((a, b) => b.age - a.age);
+    console.log("Студенти після сортування за віком:", students);
+
+    let thirdCourseStudent = students.find(student => student.course === 3);
+    console.log("Студент 3-го курсу:", thirdCourseStudent);
 }
 
+function task5() {
+    console.log("Завдання 5");
+
+    let numbers = [1, 2, 3, 4, 5];
+    console.log("Початковий масив:", numbers);
+
+    let squaredNumbers = numbers.map(num => num * num);
+    console.log("Квадрати чисел:", squaredNumbers);
+
+    let evenNumbers = numbers.filter(num => num % 2 === 0);
+    console.log("Парні числа:", evenNumbers);
+
+    let sum = numbers.reduce((acc, num) => acc + num, 0);
+    console.log("Сума чисел:", sum);
+
+    let moreNumbers = [6, 7, 8, 9, 10];
+    let allNumbers = numbers.concat(moreNumbers);
+    console.log("Об'єднаний масив:", allNumbers);
+
+    allNumbers.splice(0,3);
+    console.log("Після видалення перших трьох елементів:", allNumbers);
+}
+
+function library() {
+    console.log("Завдання 6");
+    let library = [
+        { title: 'Гаррі Поттер і філософський камінь', author: 'Джоан Роулінг', genre: "Фантастика", year: 1997, pages: 208, isAvailable: true },
+        { title: 'Кобзар', author: 'Тарас Шевченко', genre: "Лірика", year: 1840, pages: 186, isAvailable: true },
+        { title: '1984', author: 'Джордж Орвелл', genre: "Антиутопія", year: 1949, pages: 328, isAvailable: true }
+    ];
+
+    function addBook(title, author, genre, year, pages, isAvailable) {
+        library.push({ title, author, genre, year, pages, isAvailable });
+    }
+
+    function removeBook(title) {
+        library = library.filter(book => book.title !== title);
+    }
+
+    function findBooksByAuthor(author) {
+        return library.filter(book => book.author === author);
+    }
+    
+    function toggleAvailability(title, isBorrowed) {
+        let book = library.find(book => book.title === title);
+        if (book) {
+            book.isAvailable = !isBorrowed;
+        }
+    }
+
+    function sortBooksByPages() {
+        library.sort((a, b) => a.pages - b.pages);
+    }
+    
+    function getBooksStatistics() {
+        let totalBooks = library.length;
+        let availableBooks = library.filter(book => book.isAvailable).length;
+        let borrowedBooks = totalBooks - availableBooks;
+
+        let totalPages = library.reduce((acc, book) => acc + book.pages, 0);
+        let averagePages = totalBooks === 0 ? 0 : totalPages / totalBooks;
+        return { totalBooks, availableBooks, borrowedBooks, totalPages, averagePages };
+    }
+    addBook('Тіні забутих предків', 'Михайло Коцюбинський', "Пригоди", 1911, 120, true);
+    toggleAvailability('1984', true);
+    sortBooksByPages();
+
+    console.log("Статистика бібліотеки:", getBooksStatistics());
+    console.log("Книги в бібліотеці:", library);
+}
+
+function task7() {
+    console.log("Завдання 7");
+
+    let student = {
+        name: 'Олександр',
+        age: 20,
+        course: 2
+    };
+    console.log("Початковий об'єкт:", student);
+
+    student.subjects = ['Математика', 'Фізика', 'Інформатика'];
+    console.log("Після додавання властивості subjects:", student);
+
+    delete student.age;
+
+    console.log("Після видалення властивості age:", student);
+}
 
 task1();
 task2();
 task3();
+task4();
+task5();
+library();
+task7();
