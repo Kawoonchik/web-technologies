@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лампочка</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif;
+            margin-top: 50px;
+        }
+        #bulb {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid #ccc;
+        }
+
+        #bulb.regular.on { background-color: #f1c40f; box-shadow: 0 0 30px #f1c40f; border-color: #f1c40f; }
+        #bulb.energy.on { background-color: #a4b0be; box-shadow: 0 0 20px #a4b0be; border-color: #a4b0be; }
+        #bulb.led.on { background-color: #7bed9f; box-shadow: 0 0 40px #7bed9f; border-color: #7bed9f; }
+
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button, select {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bulb" class="regular"></div>
+
+    <div class="controls">
+        <button id="toggle-btn">Включити</button>
+        <select id="type-select">
+            <option value="regular">Звичайна лампочка</option>
+            <option value="energy">Енергозберігаюча</option>
+            <option value="led">Світлодіодна</option>
+        </select>
+        <button id="brightness-btn">Яскравість</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

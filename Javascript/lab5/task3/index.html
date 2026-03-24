@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дата та Час</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 40px; background-color: #f0f0f0; }
+        .section { background: white; padding: 20px; border-radius: 10px; width: 350px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #333; font-size: 18px; }
+        .clock { font-size: 40px; font-weight: bold; text-align: center; font-family: monospace; color: #2c3e50; }
+        
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+        
+        input { width: 100%; padding: 8px; margin-bottom: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 5px; }
+        .result { font-weight: bold; color: #e74c3c; min-height: 20px; text-align: center;}
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h3>1. Цифровий годинник</h3>
+        <div class="clock" id="digital-clock">00<span class="blink">:</span>00<span class="blink">:</span>00</div>
+    </div>
+
+    <div class="section">
+        <h3>2. Таймер зворотного відліку</h3>
+        <input type="datetime-local" id="countdown-input">
+        <div class="result" id="countdown-result">Оберіть дату та час</div>
+    </div>
+
+    <div class="section">
+        <h3>3 & 4. Календар та День Народження</h3>
+        <input type="date" id="bday-input">
+        <div class="result" id="bday-result">Вкажіть дату народження</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

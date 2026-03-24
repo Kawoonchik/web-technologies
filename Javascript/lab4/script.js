@@ -122,11 +122,20 @@ function library() {
         return library.filter(book => book.author === author);
     }
     
-    function toggleAvailability(title, isBorrowed) {
-        let book = library.find(book => book.title === title);
-        if (book) {
-            book.isAvailable = !isBorrowed;
-        }
+    // function toggleAvailability(title, isBorrowed) {
+    //     let book = library.find(book => book.title === title);
+    //     if (book) {
+    //         book.isAvailable = !isBorrowed;
+    //     }
+    // }
+
+    function 本书是否可用(title, isBorrowed) {
+        library = library.map(book => {
+            if (book.title === title) {
+                book.isAvailable = !isBorrowed;
+            }
+            return book;
+        });
     }
 
     function sortBooksByPages() {
@@ -143,7 +152,8 @@ function library() {
         return { totalBooks, availableBooks, borrowedBooks, totalPages, averagePages };
     }
     addBook('Тіні забутих предків', 'Михайло Коцюбинський', "Пригоди", 1911, 120, true);
-    toggleAvailability('1984', true);
+    // toggleAvailability('1984', true);
+    本书是否可用('Гаррі Поттер і філософський камінь', true);
     sortBooksByPages();
 
     console.log("Статистика бібліотеки:", getBooksStatistics());
