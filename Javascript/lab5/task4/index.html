@@ -1,82 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffic Light</title>
+    <title>Облік продуктів магазину</title>
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-family: sans-serif;
-            margin-top: 50px;
-            background-color: #f0f0f0;
-        }
-        .traffic-light {
-            background-color: #2c3e50;
-            width: 100px;
-            padding: 20px;
-            border-radius: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-        }
-        .light {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #111;
-            margin: 0 auto;
-            opacity: 0.1;
-            transition: opacity 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .light.red.active { background-color: #ff4757; opacity: 1; box-shadow: 0 0 25px #ff4757; }
-        .light.yellow.active { background-color: #ffa502; opacity: 1; box-shadow: 0 0 25px #ffa502; }
-        .light.green.active { background-color: #2ed573; opacity: 1; box-shadow: 0 0 25px #2ed573; }
-
-        #status-text {
-            margin-top: 30px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #2c3e50;
-            text-transform: uppercase;
-        }
-        .controls {
-            margin-top: 20px;
-            display: flex;
-            gap: 15px;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            border-radius: 8px;
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
+        body { font-family: sans-serif; display: flex; gap: 20px; padding: 20px; background: #f8f9fa; }
+        .panel { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex: 1; }
+        h3 { margin-top: 0; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        input, button { padding: 8px; margin-bottom: 10px; width: 100%; box-sizing: border-box; }
+        button { background: #27ae60; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #2ecc71; }
+        #output { background: #2d3436; color: #00b894; padding: 15px; border-radius: 5px; font-family: monospace; white-space: pre-wrap; height: 400px; overflow-y: auto; }
+        .flex-row { display: flex; gap: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="traffic-light">
-        <div class="light red" id="red-light"></div>
-        <div class="light yellow" id="yellow-light"></div>
-        <div class="light green" id="green-light"></div>
+    <div class="panel">
+        <h3>Керування магазином</h3>
+        
+        <input type="text" id="add-name" placeholder="Назва товару (напр. Спатіфілум)">
+        <div class="flex-row">
+            <input type="number" id="add-price" placeholder="Ціна">
+            <input type="number" id="add-qty" placeholder="Кількість">
+        </div>
+        <button id="btn-add">Додати продукт</button>
+
+        <hr>
+
+        <input type="text" id="search-name" placeholder="Введіть назву для пошуку">
+        <button id="btn-search">Знайти продукт</button>
+
+        <hr>
+
+        <div class="flex-row">
+            <input type="number" id="order-id" placeholder="ID товару">
+            <input type="number" id="order-qty" placeholder="Кількість для замовлення">
+        </div>
+        <button id="btn-order">Створити замовлення</button>
     </div>
 
-    <div id="status-text">Вимкнено</div>
-
-    <div class="controls">
-        <button id="manual-btn">Наступний стан</button>
-        <button id="settings-btn">Налаштувати час</button>
+    <div class="panel">
+        <h3>Журнал операцій</h3>
+        <div id="output"></div>
     </div>
 
     <script src="script.js"></script>

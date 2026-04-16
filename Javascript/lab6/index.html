@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantCare Каталог</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Каталог</h1>
+        <div id="total-price" class="total-price">Загальна вартість: 0 ₴</div>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <div class="filter-group">
+                <button class="filter-btn" data-category="Усі">Усі</button>
+                <button class="filter-btn" data-category="Квітучі">Квітучі</button>
+                <button class="filter-btn" data-category="Декоративно-листяні">Декоративно-листяні</button>
+                <button class="filter-btn" data-category="Сукуленти">Сукуленти</button>
+                <button class="filter-btn" data-category="Овоч">Овоч</button>
+                <button id="reset-filter" class="reset-btn">Скинути фільтр</button>
+            </div>
+
+            <div class="sort-group">
+                <button class="sort-btn" data-sort="price">Сортувати за ціною</button>
+                <button class="sort-btn" data-sort="dateCreated">Сортувати за датою створення</button>
+                <button class="sort-btn" data-sort="dateUpdated">Сортувати за датою оновлення</button>
+                <button id="reset-sort" class="reset-btn">Скинути сортування</button>
+            </div>
+
+            <button id="add-new-btn" class="primary-btn">Додати нову рослину</button>
+        </section>
+
+        <section id="product-list" class="product-grid">
+            </section>
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h2 id="modal-title">Додати рослину</h2>
+            <form id="product-form">
+                <input type="hidden" id="product-id">
+                
+                <label for="title">Назва рослини:</label>
+                <input type="text" id="title" required minlength="2">
+                
+                <label for="price">Ціна (₴):</label>
+                <input type="number" id="price" required min="1">
+                
+                <label for="category">Категорія:</label>
+                <select id="category" required>
+                    <option value="Квітучі">Квітучі</option>
+                    <option value="Декоративно-листяні">Декоративно-листяні</option>
+                    <option value="Сукуленти">Сукуленти</option>
+                </select>
+                
+                <label for="image">URL зображення:</label>
+                <input type="url" id="image" required>
+                
+                <button type="submit" class="primary-btn">Зберегти</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="snackbar" class="snackbar"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
