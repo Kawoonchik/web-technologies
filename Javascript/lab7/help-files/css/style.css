@@ -110,7 +110,7 @@ body {
   height: 480px;
   overflow: hidden;
 
-  background: url(../img/background-dark.png) no-repeat;
+  background: url(../img/bg.png) no-repeat;
   background-size: cover;
 }
 /*                              End Main game screen style                   */
@@ -312,30 +312,39 @@ body {
 
 .gunman-level-1 {
   background: url(../img/gunman.png) 0 0;
+  background-size: 1820px auto;
+  background-repeat: no-repeat;
   animation: gunman-level-1__walk 1s steps(3) infinite;
 }
 
 .gunman-level-1__standing {
-  background-position: -400px 0;
+  background-position: -390px 0;
 }
 
 .gunman-level-1__ready {
-  background-position: -808px 0;
+  background-position: -780px 0;
 }
 
 .gunman-level-1__shooting {
   animation: gunman-level-1__duel 0.5s step-start;
   animation-iteration-count: 1;
-  background-position: -940px 0;
-  width: 135px;
+  background-position: -1170px 0;
+  width: 130px;
   left: 340px;
 }
 
 .gunman-level-1__death {
-  animation: gunman-level-1__death 1s steps(4);
-  background-position: -1616px 0;
-  width: 128px;
+  animation: gunman-level-1__death 0.6s forwards;
+  background-position: -1572px 0;
+  width: 120px;
   left: 340px;
+}
+
+.gunman-level-1__won {
+    background-position: -1690px 0; 
+    width: 130px;
+    left: 340px;
+    animation: none;
 }
 
 @keyframes gunman-level-1__walk {
@@ -357,12 +366,17 @@ body {
 }
 
 @keyframes gunman-level-1__death {
-  from {
-
-  }
-  to {
-
-  }
+  /* 1 кадр: Хапається за груди (-1572 + 131*3) */
+  0%, 24.99% { background-position: -1179px 0; }
+  
+  /* 2 кадр: Падає назад (-1572 + 131*2) */
+  25%, 49.99% { background-position: -1310px 0; }
+  
+  /* 3 кадр: Задирає ноги (-1572 + 131) */
+  50%, 74.99% { background-position: -1441px 0; }
+  
+  /* 4 кадр: Залишається лише капелюх */
+  75%, 100% { background-position: -1572px 0; }
 }
 
 
