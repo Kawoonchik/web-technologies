@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draggable Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span id="status-text">Натисніть «Редагувати» для керування картками</span>
+            <button id="edit-btn">Редагувати</button>
+        </div>
+        
+        <div class="grid" id="card-grid">
+            <div class="card" id="c1">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #f7df1e;">JS</div>
+                <div class="title">JavaScript</div>
+                <div class="desc">веб / скрипти</div>
+            </div>
+            <div class="card" id="c2">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #3776ab; color: white;">Py</div>
+                <div class="title">Python</div>
+                <div class="desc">дані / AI</div>
+            </div>
+            <div class="card" id="c3">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #b07219; color: white;">J</div>
+                <div class="title">Java</div>
+                <div class="desc">бекенд / ентерпрайз</div>
+            </div>
+            <div class="card" id="c4">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #3178c6; color: white;">TS</div>
+                <div class="title">TypeScript</div>
+                <div class="desc">типізований JS</div>
+            </div>
+            <div class="card" id="c5">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #dea584;">Rs</div>
+                <div class="title">Rust</div>
+                <div class="desc">системи / швидкість</div>
+            </div>
+            <div class="card" id="c6">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #00add8; color: white;">Go</div>
+                <div class="title">Go</div>
+                <div class="desc">хмара / мікросервіси</div>
+            </div>
+            <div class="card" id="c7">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #7f52ff; color: white;">Kt</div>
+                <div class="title">Kotlin</div>
+                <div class="desc">Android / JVM</div>
+            </div>
+            <div class="card" id="c8">
+                <button class="delete-btn">×</button>
+                <div class="icon" style="background: #ffac45;">Sw</div>
+                <div class="title">Swift</div>
+                <div class="desc">iOS / macOS</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+    background-color: #f3f4f6;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #6b7280;
+}
+
+button#edit-btn {
+    padding: 10px 20px;
+    border: 1px solid #d1d5db;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+button#edit-btn.active {
+    background: #e0f2fe;
+    border-color: #bae6fd;
+    color: #0369a1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
+    position: relative;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    user-select: none;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 5px;
+}
+
+.desc {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 24px;
+    height: 24px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 10;
+}
+
+@keyframes wiggle {
+    0% { transform: rotate(-1deg); }
+    50% { transform: rotate(1.5deg); }
+    100% { transform: rotate(-1deg); }
+}
+
+.grid.edit-mode .card {
+    animation: wiggle 0.4s infinite;
+    cursor: grab;
+}
+
+.grid.edit-mode .card:nth-child(even) {
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.grid.edit-mode .delete-btn {
+    display: flex;
+}
+
+.grid.edit-mode .card:active {
+    cursor: grabbing;
+}
+
+.card.dragging {
+    opacity: 0.4;
+    transform: scale(1.05);
+    animation: none !important;
+    z-index: 100;
+}
+
+.placeholder {
+    background: transparent;
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    min-height: 140px;
+    pointer-events: none;
+}

@@ -3,8 +3,8 @@
 // DOM Elements
 const menuSection = document.querySelector('.game-menu');
 const wrapper = document.querySelector('.wrapper');
-const gameScreen = document.querySelector('.game-screen'); // Додано
-const gamePanels = document.querySelector('.game-panels'); // Додано
+const gameScreen = document.querySelector('.game-screen'); //
+const gamePanels = document.querySelector('.game-panels'); 
 const gunmanElement = document.querySelector('.gunman');
 const messageBox = document.querySelector('.message');
 const btnStart = document.querySelector('.button-start-game');
@@ -23,7 +23,6 @@ const sfxFoul = new Audio('sfx/foul.m4a');
 let enemyTimer;
 let fireTimer;
 
-// --- Pure Functions (State Management) ---
 
 // Returns initial game state
 const createInitialState = () => ({
@@ -124,6 +123,7 @@ function timeCounter() {
 
         // Enemy reaction time decreases with level
         const enemyReflex = Math.max(1000 - (gameState.level * 100), 300); 
+        
         
         // Start enemy timer
         enemyTimer = setTimeout(gunmanShootsPlayer, enemyReflex);
