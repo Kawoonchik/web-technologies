@@ -93,7 +93,7 @@ button#edit-btn.active {
     cursor: pointer;
     display: none;
     justify-content: center;
-    align-items: center;
+    align-items: center;+
     font-size: 14px;
     z-index: 10;
 }
