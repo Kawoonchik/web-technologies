@@ -66,38 +66,28 @@ document.addEventListener('DOMContentLoaded', initApp);
 let allUsers = [];
 const usersGrid = document.getElementById('users-grid');
 
-// Fetch users from Random User API
+
 const fetchUsers = async () => {
     try {
-        // Show temporary loading text
         usersGrid.innerHTML = '<p>Loading friends...</p>';
 
-        // Fetching 30 users as requested
-        const response = await fetch('https://randomuser.me/api/?results=30');
+        const response = await fetch('https://randomuser.me/api/?results=60');
 
-        // Check if response is ok (status in the range 200-299)
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
-        allUsers = data.results; // Save to global state
+        allUsers = data.results; 
 
-        // UPDATE: Restore state from URL if parameters exist, then render
-        const hasFiltersInUrl = restoreStateFromURL();
+
+        restoreStateFromURL();
         
-        if (hasFiltersInUrl) {
-            applyFiltersAndSort(); // This will apply filters from URL and render
-        } else {
-            renderUsers(allUsers); // Just render normally if no URL params
-        }
+
+        applyFiltersAndSort();
         
-        updatePaginationUI();
-
-
     } catch (error) {
         console.error('Fetch error:', error);
-        // Display error message to the user
         usersGrid.innerHTML = `
             <div style="text-align: center; color: #e74c3c; grid-column: 1 / -1;">
                 <h3>Oops! Something went wrong.</h3>
@@ -240,7 +230,7 @@ const sortUsers = (users, sortType) => {
             return usersCopy;
     }
 };
-
+const USERS_PER_PAGE = 30;
 // --- Core Logic to Apply All Filters ---
 const applyFiltersAndSort = () => {
     const searchTerm = searchInput.value.trim();
@@ -259,10 +249,18 @@ const applyFiltersAndSort = () => {
     processedUsers = filterByGender(processedUsers, selectedGender);
     processedUsers = sortUsers(processedUsers, sortValue);
 
-    renderUsers(processedUsers);
+    const totalPages = Math.ceil(processedUsers.length / USERS_PER_PAGE);
+
+    if (currentPage > totalPages) currentPage = totalPages || 1;
+
+    const startIndex = (currentPage - 1) * USERS_PER_PAGE;
+    const paginatedUsers = processedUsers.slice(startIndex, startIndex + USERS_PER_PAGE);
+
+    renderUsers(paginatedUsers);
     
-    // UPDATE: Add this line to update URL every time filters change
+    updatePaginationUI(totalPages);
     updateURLParams();
+
 };
 
 // --- Event Listeners ---
@@ -372,9 +370,20 @@ const generatePaginationHTML = (activePage) => {
     }).join('');
 };
 
-// Function to update UI for pagination
-const updatePaginationUI = () => {
-    paginationContainer.innerHTML = generatePaginationHTML(currentPage);
+
+const updatePaginationUI = (totalPages) => {
+
+    if (totalPages <= 1) {
+        paginationContainer.innerHTML = '';
+        return;
+    }
+
+    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+    
+    paginationContainer.innerHTML = pages.map(page => {
+        const activeStyle = page === currentPage ? 'background-color: var(--primary-color); color: white;' : '';
+        return `<button class="pagination-btn auth__btn" data-page="${page}" style="padding: 0.5rem 1rem; margin: 0 0.2rem; cursor: pointer; ${activeStyle}">${page}</button>`;
+    }).join('');
 };
 
 // Function to fetch the next page of users
@@ -388,7 +397,7 @@ const fetchMoreUsers = async () => {
     try {
         currentPage++;
         // Fetch next 30 users using the 'page' query parameter
-        const response = await fetch(`https://randomuser.me/api/?results=30&page=${currentPage}`);
+        const response = await fetch(`https://randomuser.me/api/?results=60&page=${currentPage}`);
         
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -480,4 +489,18 @@ usersGrid.addEventListener('click', (e) => {
     
     // Re-render the UI so the button updates its state (red heart / white heart)
     applyFiltersAndSort();
+});
+
+
+paginationContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('pagination-btn')) {
+
+        currentPage = Number(e.target.dataset.page);
+        
+
+        applyFiltersAndSort(); 
+        
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 });
